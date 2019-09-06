@@ -1,174 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cei:text xmlns:cei="http://www.monasterium.net/NS/cei">
    <cei:front>
-      <cei:sourceDesc>[PLATZHALTER]</cei:sourceDesc>
-
-
-      <cei:date>1132-1140<cei:note>Étienne I d’Autun (1112-1139) + Guillaume de Fontenay
-            (1132-1154). En 1170-1171 se produit peut-être brièvement une occurrence similaire,
-            argumenter sur le fonds de l’acte et les dîmes, peut-être avant 1136.</cei:note>
-      </cei:date>
-
-
-      <cei:p>Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de Guillaume, abbé de
-         Fontenay, dispense l'abbaye de Fontenay de payer les dîmes sur ses possessions sises dans
-         le diocèse d'Autun, notamment à Flacey.</cei:p>
-
-
-   </cei:front>
+         
+            
+               Acte original n° 1 = Access n° 1253 
+               
+            
+            
+               See the header of the teiCorpus
+            
+            
+               
+                  
+                     
+                        
+                           Dijon
+                           Archives départementales de la Côte
+                                        d'Or
+                           15 H 17, pièce 1
+                        
+                        
+                           
+                              
+                                 
+                                    Original en parchemin
+                                 
+                                 
+                                    
+                                       165/185
+                                       290
+                                    
+                                    
+                                       135
+                                       265
+                                    
+                                 
+                              
+                              
+                                  réglure à la mine
+                                                de plomb ; 16 lignes ; repli 12-19 mm
+                              
+                           
+                           
+                              
+                                 écriture prégothique
+                                                diplomatique
+                              
+                           
+                           Mentions dorsales : (XIIe s.) « Inter cartas abbatie
+                                        de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
+                                        decimis non reddendis. Inter cartas abbatie » ; « De decimis
+                                        Flaceaci, nec de as[...] nec de [...]baribus aliis » ;
+                                        (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) « Flacey. Don
+                                        d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a.
+                                        corr. : terre) qui lui apartenoit de Thouillon depuis le
+                                        Fain (…) Cotté O. » ; (1787) « N° 2 / 15 des calendes de
+                                        juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
+                                        Derepas » 
+                        
+                     
+                  
+                  
+                     
+                        
+                           Dijon
+                           Archives départementales de la Côte
+                                        d'Or
+                           15 H 9
+                        
+                        Cartulaire 1, fol. 21r-v. - (Abbatia, 2) ; table :
+                                        II. Carta Stephani episcopi de decimis non
+                                    reddendis
+                        
+                     
+                  
+                  {Plancher, 1739-1781 #5481@t. I, preuves p. XLIII, n°
+                            LXIV}
+               
+               
+                  ADCO 15 H 1, fol. 71v (Flacey. O)
+                  ADCO 15 H 2, fol. 59v (Flacey. O)
+                  ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé d’un sceau qui y étoit
+                            autrefois ». Vu les analyses de l’acte, sans doute attaché à Flaciacum,
+                            4
+               
+            
+         
+         
+            
+               1132-1140Étienne I d’Autun (1112-1139) +
+                            Guillaume de Fontenay (1132-1154). En 1170-1171 se produit peut-être
+                            brièvement une occurrence similaire, argumenter sur le fonds de l’acte
+                            et les dîmes, peut-être avant 1136.
+               
+            
+            
+               Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de
+                            Guillaume, abbé de Fontenay, dispense l'abbaye de Fontenay de payer les
+                            dîmes sur ses possessions sises dans le diocèse d'Autun, notamment à
+                            Flacey.
+            
+         
+      </cei:front>
    <cei:body>
-      <cei:idno>[PLATZHALTER]</cei:idno>
+      <cei:idno><!--Platzhalter--></cei:idno>
       <cei:chDesc>
          <cei:abstract>
-            <cei:p>Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de Guillaume, abbé
-               de Fontenay, dispense l'abbaye de Fontenay de payer les dîmes sur ses possessions
-               sises dans le diocèse d'Autun, notamment à Flacey.</cei:p>
-         </cei:abstract>
+               Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de
+                            Guillaume, abbé de Fontenay, dispense l'abbaye de Fontenay de payer les
+                            dîmes sur ses possessions sises dans le diocèse d'Autun, notamment à
+                            Flacey.
+            </cei:abstract>
          <cei:issued>
-            <cei:date>1132-1140<cei:note>Étienne I d’Autun (1112-1139) + Guillaume de Fontenay
-                  (1132-1154). En 1170-1171 se produit peut-être brièvement une occurrence
-                  similaire, argumenter sur le fonds de l’acte et les dîmes, peut-être avant
-                  1136.</cei:note>
-            </cei:date>
-         </cei:issued>
+               1132-1140Étienne I d’Autun (1112-1139) +
+                            Guillaume de Fontenay (1132-1154). En 1170-1171 se produit peut-être
+                            brièvement une occurrence similaire, argumenter sur le fonds de l’acte
+                            et les dîmes, peut-être avant 1136.
+               
+            </cei:issued>
          <cei:witList>
-            <cei:witness>
-               <cei:traditioForm/>
-               <cei:figure/>
-               <cei:archIdentifier>
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 17, pièce 1</cei:idno>
-
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 9</cei:idno>
-               </cei:archIdentifier>
-               <cei:physicalDesc>
-                  <cei:p>Original en parchemin</cei:p>
-                  <cei:height>165/185</cei:height>
-                  <cei:width>290</cei:width>
-                  <cei:height>135</cei:height>
-                  <cei:width>265</cei:width> réglure à la mine de plomb ; 16 lignes ; repli 12-19 mm
-                     <cei:p> écriture prégothique diplomatique </cei:p> Mentions dorsales : (XIIe
-                  s.) « Inter cartas abbatie de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
-                  decimis non reddendis. Inter cartas abbatie » ; « De decimis Flaceaci, nec de
-                  as[...] nec de [...]baribus aliis » ; (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) «
-                  Flacey. Don d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a. corr. :
-                  terre) qui lui apartenoit de Thouillon depuis le Fain (…) Cotté O. » ; (1787) « N°
-                  2 / 15 des calendes de juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
-                  Derepas » <cei:material>
-                     <cei:p>Original en parchemin</cei:p>
-                  </cei:material>
-                  <cei:dimensions>
-                     <cei:height>165/185</cei:height>
-                     <cei:width>290</cei:width> <cei:height>135</cei:height>
-                     <cei:width>265</cei:width>
-                  </cei:dimensions>
-                  <cei:condition/>
-               </cei:physicalDesc>
-               <cei:auth>
-                  <cei:sealDesc/>
-                  <cei:notariusDesc/>
-               </cei:auth>
-               <cei:nota/>
-               <cei:rubrum/>
-            </cei:witness>
-            <cei:witness>
-               <cei:traditioForm/>
-               <cei:figure/>
-               <cei:archIdentifier>
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 17, pièce 1</cei:idno>
-
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 9</cei:idno>
-               </cei:archIdentifier>
-               <cei:physicalDesc>
-                  <cei:p>Original en parchemin</cei:p>
-                  <cei:height>165/185</cei:height>
-                  <cei:width>290</cei:width>
-                  <cei:height>135</cei:height>
-                  <cei:width>265</cei:width> réglure à la mine de plomb ; 16 lignes ; repli 12-19 mm
-                     <cei:p> écriture prégothique diplomatique </cei:p> Mentions dorsales : (XIIe
-                  s.) « Inter cartas abbatie de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
-                  decimis non reddendis. Inter cartas abbatie » ; « De decimis Flaceaci, nec de
-                  as[...] nec de [...]baribus aliis » ; (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) «
-                  Flacey. Don d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a. corr. :
-                  terre) qui lui apartenoit de Thouillon depuis le Fain (…) Cotté O. » ; (1787) « N°
-                  2 / 15 des calendes de juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
-                  Derepas » <cei:material>
-                     <cei:p>Original en parchemin</cei:p>
-                  </cei:material>
-                  <cei:dimensions>
-                     <cei:height>165/185</cei:height>
-                     <cei:width>290</cei:width> <cei:height>135</cei:height>
-                     <cei:width>265</cei:width>
-                  </cei:dimensions>
-                  <cei:condition/>
-               </cei:physicalDesc>
-               <cei:auth>
-                  <cei:sealDesc/>
-                  <cei:notariusDesc/>
-               </cei:auth>
-               <cei:nota/>
-               <cei:rubrum/>
-            </cei:witness>
-            <cei:witness>
-               <cei:traditioForm/>
-               <cei:figure/>
-               <cei:archIdentifier>
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 17, pièce 1</cei:idno>
-
-                  <cei:settlement>Dijon</cei:settlement>
-                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
-                  <cei:idno>15 H 9</cei:idno>
-               </cei:archIdentifier>
-               <cei:physicalDesc>
-                  <cei:p>Original en parchemin</cei:p>
-                  <cei:height>165/185</cei:height>
-                  <cei:width>290</cei:width>
-                  <cei:height>135</cei:height>
-                  <cei:width>265</cei:width> réglure à la mine de plomb ; 16 lignes ; repli 12-19 mm
-                     <cei:p> écriture prégothique diplomatique </cei:p> Mentions dorsales : (XIIe
-                  s.) « Inter cartas abbatie de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
-                  decimis non reddendis. Inter cartas abbatie » ; « De decimis Flaceaci, nec de
-                  as[...] nec de [...]baribus aliis » ; (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) «
-                  Flacey. Don d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a. corr. :
-                  terre) qui lui apartenoit de Thouillon depuis le Fain (…) Cotté O. » ; (1787) « N°
-                  2 / 15 des calendes de juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
-                  Derepas » <cei:material>
-                     <cei:p>Original en parchemin</cei:p>
-                  </cei:material>
-                  <cei:dimensions>
-                     <cei:height>165/185</cei:height>
-                     <cei:width>290</cei:width> <cei:height>135</cei:height>
-                     <cei:width>265</cei:width>
-                  </cei:dimensions>
-                  <cei:condition/>
-               </cei:physicalDesc>
-               <cei:auth>
-                  <cei:sealDesc/>
-                  <cei:notariusDesc/>
-               </cei:auth>
-               <cei:nota/>
-               <cei:rubrum/>
-            </cei:witness>
-         </cei:witList>
+                  
+                     
+                        
+                           Dijon
+                           Archives départementales de la Côte
+                                        d'Or
+                           15 H 17, pièce 1
+                        
+                        
+                           
+                              
+                                 
+                                    Original en parchemin
+                                 
+                                 
+                                    
+                                       165/185
+                                       290
+                                    
+                                    
+                                       135
+                                       265
+                                    
+                                 
+                              
+                              
+                                  réglure à la mine
+                                                de plomb ; 16 lignes ; repli 12-19 mm
+                              
+                           
+                           
+                              
+                                 écriture prégothique
+                                                diplomatique
+                              
+                           
+                           Mentions dorsales : (XIIe s.) « Inter cartas abbatie
+                                        de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
+                                        decimis non reddendis. Inter cartas abbatie » ; « De decimis
+                                        Flaceaci, nec de as[...] nec de [...]baribus aliis » ;
+                                        (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) « Flacey. Don
+                                        d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a.
+                                        corr. : terre) qui lui apartenoit de Thouillon depuis le
+                                        Fain (…) Cotté O. » ; (1787) « N° 2 / 15 des calendes de
+                                        juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
+                                        Derepas » 
+                        
+                     
+                  
+                  
+                     
+                        
+                           Dijon
+                           Archives départementales de la Côte
+                                        d'Or
+                           15 H 9
+                        
+                        Cartulaire 1, fol. 21r-v. - (Abbatia, 2) ; table :
+                                        II. Carta Stephani episcopi de decimis non
+                                    reddendis
+                        
+                     
+                  
+                  {Plancher, 1739-1781 #5481@t. I, preuves p. XLIII, n°
+                            LXIV}
+               </cei:witList>
          <cei:diplomaticAnalysis>
             <cei:listBibl>
-               <cei:listBibl>
-                  <cei:bibl>ADCO 15 H 1, fol. 71v (Flacey. O)</cei:bibl>
-                  <cei:bibl>ADCO 15 H 2, fol. 59v (Flacey. O)</cei:bibl>
-                  <cei:bibl>ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé d’un sceau qui y étoit
-                     autrefois ». Vu les analyses de l’acte, sans doute attaché à Flaciacum,
-                     4</cei:bibl>
+                  ADCO 15 H 1, fol. 71v (Flacey. O)
+                  ADCO 15 H 2, fol. 59v (Flacey. O)
+                  ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé d’un sceau qui y étoit
+                            autrefois ». Vu les analyses de l’acte, sans doute attaché à Flaciacum,
+                            4
                </cei:listBibl>
-            </cei:listBibl>
          </cei:diplomaticAnalysis>
          <cei:lang_MOM/>
       </cei:chDesc>

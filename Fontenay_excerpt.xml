@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<teiCorpus>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Recueil des actes de l’abbaye de Fontenay</title>
+            <author>Dominique Stutzmann</author>
+         </titleStmt>
+         <editionStmt>
+            <p>Version partielle contenant les actes dont les originaux sont conservés</p>
+         </editionStmt>
+         <publicationStmt>
+            <p>Distribué par Telma</p>
+         </publicationStmt>
+         <sourceDesc default="false">
+            <p>Créé sur MS Word, balisé sur oXgenXML</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <TEI>
       <teiHeader>
          <fileDesc>
             <titleStmt>
@@ -15,8 +33,7 @@
                      <msDesc>
                         <msIdentifier>
                            <settlement>Dijon</settlement>
-                           <repository>Archives départementales de la Côte
-                                        d'Or</repository>
+                           <repository>Archives départementales de la Côte d'Or</repository>
                            <idno>15 H 17, pièce 1</idno>
                         </msIdentifier>
                         <physDesc>
@@ -37,26 +54,24 @@
                                  </extent>
                               </supportDesc>
                               <layoutDesc>
-                                 <layout columns="1" writtenLines="16"> réglure à la mine
-                                                de plomb ; 16 lignes ; repli 12-19 mm</layout>
+                                 <layout columns="1" writtenLines="16"> réglure à la mine de plomb ;
+                                    16 lignes ; repli 12-19 mm</layout>
                               </layoutDesc>
                            </objectDesc>
                            <handDesc>
                               <p>
-                                 <term type="script">écriture prégothique
-                                                diplomatique</term>
+                                 <term type="script">écriture prégothique diplomatique</term>
                               </p>
                            </handDesc>
-                           <additions>Mentions dorsales : (XIIe s.) « Inter cartas abbatie
-                                        de decimis non reddendis » ; (XIIIe s.) « .ija » ; « De
-                                        decimis non reddendis. Inter cartas abbatie » ; « De decimis
-                                        Flaceaci, nec de as[...] nec de [...]baribus aliis » ;
-                                        (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) « Flacey. Don
-                                        d’Estienne evesque d'Autun a Fontenay de toutte la dîme (a.
-                                        corr. : terre) qui lui apartenoit de Thouillon depuis le
-                                        Fain (…) Cotté O. » ; (1787) « N° 2 / 15 des calendes de
-                                        juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex
-                                        Derepas » </additions>
+                           <additions>Mentions dorsales : (XIIe s.) « Inter cartas abbatie de
+                              decimis non reddendis » ; (XIIIe s.) « .ija » ; « De decimis non
+                              reddendis. Inter cartas abbatie » ; « De decimis Flaceaci, nec de
+                              as[...] nec de [...]baribus aliis » ; (XVIIe s.) « Flacy. Q. » ;
+                              (XVIIe s.) « Flacey. Don d’Estienne evesque d'Autun a Fontenay de
+                              toutte la dîme (a. corr. : terre) qui lui apartenoit de Thouillon
+                              depuis le Fain (…) Cotté O. » ; (1787) « N° 2 / 15 des calendes de
+                              juillet sans autre date. » ; (XVIIIe s.) « Premiere. Alex Derepas »
+                           </additions>
                         </physDesc>
                      </msDesc>
                   </witness>
@@ -64,41 +79,38 @@
                      <msDesc>
                         <msIdentifier>
                            <settlement>Dijon</settlement>
-                           <repository>Archives départementales de la Côte
-                                        d'Or</repository>
+                           <repository>Archives départementales de la Côte d'Or</repository>
                            <idno>15 H 9</idno>
                         </msIdentifier>
-                        <p>Cartulaire 1, <locus>fol. 21r-v</locus>. - (Abbatia, 2) ; table :
-                                        <q>II. Carta Stephani episcopi de decimis non
-                                    reddendis</q>
+                        <p>Cartulaire 1, <locus>fol. 21r-v</locus>. - (Abbatia, 2) ; table : <q>II.
+                              Carta Stephani episcopi de decimis non reddendis</q>
                         </p>
                      </msDesc>
                   </witness>
                   <witness n="a">{Plancher, 1739-1781 #5481@t. I, preuves p. XLIII, n°
-                            LXIV}</witness>
+                     LXIV}</witness>
                </listWit>
                <listBibl default="false">
                   <bibl default="false" status="draft">ADCO 15 H 1, fol. 71v (Flacey. O)</bibl>
                   <bibl default="false" status="draft">ADCO 15 H 2, fol. 59v (Flacey. O)</bibl>
-                  <bibl default="false" status="draft">ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé d’un sceau qui y étoit
-                            autrefois ». Vu les analyses de l’acte, sans doute attaché à Flaciacum,
-                            4</bibl>
+                  <bibl default="false" status="draft">ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé
+                     d’un sceau qui y étoit autrefois ». Vu les analyses de l’acte, sans doute
+                     attaché à Flaciacum, 4</bibl>
                </listBibl>
             </sourceDesc>
          </fileDesc>
          <profileDesc>
             <creation>
-               <date type="documentCreation" when="1139-12-31">1132-1140<note>Étienne I d’Autun (1112-1139) +
-                            Guillaume de Fontenay (1132-1154). En 1170-1171 se produit peut-être
-                            brièvement une occurrence similaire, argumenter sur le fonds de l’acte
-                            et les dîmes, peut-être avant 1136.</note>
+               <date type="documentCreation" when="1139-12-31">1132-1140<note>Étienne I d’Autun
+                     (1112-1139) + Guillaume de Fontenay (1132-1154). En 1170-1171 se produit
+                     peut-être brièvement une occurrence similaire, argumenter sur le fonds de
+                     l’acte et les dîmes, peut-être avant 1136.</note>
                </date>
             </creation>
             <abstract>
-               <p>Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de
-                            Guillaume, abbé de Fontenay, dispense l'abbaye de Fontenay de payer les
-                            dîmes sur ses possessions sises dans le diocèse d'Autun, notamment à
-                            Flacey.</p>
+               <p>Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de Guillaume, abbé de
+                  Fontenay, dispense l'abbaye de Fontenay de payer les dîmes sur ses possessions
+                  sises dans le diocèse d'Autun, notamment à Flacey.</p>
             </abstract>
          </profileDesc>
       </teiHeader>
@@ -106,9 +118,7 @@
          <body>
             <div1 org="uniform" sample="complete">
                <p>
-                  <pb xml:id="pb_Fontenay_1"
-                      n="1"
-                      facs="FRAD021_15_H_17_0003.png"/>
+                  <pb xml:id="pb_Fontenay_1" n="1" facs="FRAD021_15_H_17_0003.png"/>
                   <lb n="1"/>
                   <persName>
                      <w xml:id="w_Fontenay_1">
@@ -657,3 +667,4 @@
          </body>
       </text>
    </TEI>
+</teiCorpus>

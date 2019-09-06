@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cei:text xmlns:cei="http://www.monasterium.net/NS/cei">
+   <cei:front>
+      <cei:sourceDesc>
+         <cei:sourceDescVolltext>
+            <cei:bibl/>
+         </cei:sourceDescVolltext>
+         <cei:sourceDescRegest>
+            <cei:bibl/>
+         </cei:sourceDescRegest>
+      </cei:sourceDesc>
+   </cei:front>
+   <cei:body>
+      <cei:idno>fontenay_id_1</cei:idno>
+      <cei:chDesc>
+         <cei:abstract> Etienne [Ier de Bâgé], évêque d’Autun, accédant à la requête de Guillaume,
+            abbé de Fontenay, dispense l'abbaye de Fontenay de payer les dîmes sur ses possessions
+            sises dans le diocèse d'Autun, notamment à Flacey. </cei:abstract>
+         <cei:issued>
+            <cei:date value="11391231">1132-1140<cei:note>Étienne I d’Autun (1112-1139) + Guillaume
+                  de Fontenay (1132-1154). En 1170-1171 se produit peut-être brièvement une
+                  occurrence similaire, argumenter sur le fonds de l’acte et les dîmes, peut-être
+                  avant 1136.</cei:note>
+            </cei:date>
+         </cei:issued>
+         <cei:witnessOrig>
+            <cei:traditioForm>Original</cei:traditioForm>
+            <cei:archIdentifier>
+               <cei:settlement>Dijon</cei:settlement>
+               <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
+               <cei:idno>15 H 17, pièce 1</cei:idno>
+               <cei:note/>
+            </cei:archIdentifier>
+            <cei:physicalDesc>
+               <cei:layout columns="" writtenLines="">
+                  <cei:p/>
+               </cei:layout>
+               <cei:material>Original en parchemin</cei:material>
+               <cei:dimensions type="leaves" unit="mm">
+                  <cei:height>165/185</cei:height>
+                  <cei:width>290</cei:width>
+               </cei:dimensions>
+               <cei:dimensions type="written" unit="mm">
+                  <cei:height>135</cei:height>
+                  <cei:width>265</cei:width>
+               </cei:dimensions>
+               <cei:condition/>
+               <cei:handDesc>
+                  <cei:p>
+                     <cei:term type="script">écriture prégothique diplomatique</cei:term>
+                  </cei:p>
+               </cei:handDesc>
+               <cei:additions>Mentions dorsales : (XIIe s.) « Inter cartas abbatie de decimis non
+                  reddendis » ; (XIIIe s.) « .ija » ; « De decimis non reddendis. Inter cartas
+                  abbatie » ; « De decimis Flaceaci, nec de as[...] nec de [...]baribus aliis » ;
+                  (XVIIe s.) « Flacy. Q. » ; (XVIIe s.) « Flacey. Don d’Estienne evesque d'Autun a
+                  Fontenay de toutte la dîme (a. corr. : terre) qui lui apartenoit de Thouillon
+                  depuis le Fain (…) Cotté O. » ; (1787) « N° 2 / 15 des calendes de juillet sans
+                  autre date. » ; (XVIIIe s.) « Premiere. Alex Derepas » </cei:additions>
+            </cei:physicalDesc>
+            <cei:auth>
+               <cei:notariusDesc/>
+               <cei:sealDesc/>
+            </cei:auth>
+            <cei:nota/>
+            <cei:rubrum/>
+         </cei:witnessOrig>
+         <cei:witListPar>
+            <cei:witness>
+               <cei:archIdentifier>
+                  <cei:settlement>Dijon</cei:settlement>
+                  <cei:arch>Archives départementales de la Côte d'Or</cei:arch>
+                  <cei:idno>15 H 9</cei:idno>
+                  <cei:note>Cartulaire 1, fol. 21r-v. - (Abbatia, 2) ; table : II. Carta Stephani
+                     episcopi de decimis non reddendis </cei:note>
+               </cei:archIdentifier>
+               <cei:physicalDesc>
+                  <cei:layout columns="" writtenLines="">
+                     <cei:p/>
+                  </cei:layout>
+                  <cei:material/>
+                  <cei:dimensions type="" unit=""/>
+                  <cei:dimensions type="" unit=""/>
+                  <cei:condition/>
+                  <cei:handDesc>
+                     <cei:p>
+                        <cei:term type="script"/>
+                     </cei:p>
+                  </cei:handDesc>
+                  <cei:additions/>
+               </cei:physicalDesc>
+               <cei:auth>
+                  <cei:notariusDesc/>
+                  <cei:sealDesc/>
+               </cei:auth>
+               <cei:nota/>
+               <cei:rubrum/>
+            </cei:witness>
+            <cei:witness>
+               <cei:archIdentifier>
+                  <cei:settlement/>
+                  <cei:arch/>
+                  <cei:idno/>
+                  <cei:note/>
+               </cei:archIdentifier>
+               <cei:physicalDesc>
+                  <cei:layout columns="" writtenLines="">
+                     <cei:p/>
+                  </cei:layout>
+                  <cei:material/>
+                  <cei:dimensions type="" unit=""/>
+                  <cei:dimensions type="" unit=""/>
+                  <cei:condition/>
+                  <cei:handDesc>
+                     <cei:p>
+                        <cei:term type="script"/>
+                     </cei:p>
+                  </cei:handDesc>
+                  <cei:additions/>
+               </cei:physicalDesc>
+               <cei:auth>
+                  <cei:notariusDesc/>
+                  <cei:sealDesc/>
+               </cei:auth>
+               <cei:nota/>
+               <cei:rubrum/>{Plancher, 1739-1781 #5481@t. I, preuves p. XLIII, n° LXIV}
+            </cei:witness>
+         </cei:witListPar>
+         <cei:diplomaticAnalysis>
+            <cei:listBibl>
+               <cei:bibl>ADCO 15 H 1, fol. 71v (Flacey. O)</cei:bibl>
+               <cei:bibl>ADCO 15 H 2, fol. 59v (Flacey. O)</cei:bibl>
+               <cei:bibl>ADCO 15 H 3, p. 305 (XXII. 3. 2) : « scellé d’un sceau qui y étoit
+                  autrefois ». Vu les analyses de l’acte, sans doute attaché à Flaciacum,
+                  4</cei:bibl>
+            </cei:listBibl>
+            <cei:listBiblRegest>
+               <cei:bibl/>
+            </cei:listBiblRegest>
+            <cei:listBiblFaksimile>
+               <cei:bibl/>
+            </cei:listBiblFaksimile>
+            <cei:listBiblErw>
+               <cei:bibl/>
+            </cei:listBiblErw>
+            <cei:quoteOriginaldatierung/>
+            <cei:nota/>
+            <cei:listBiblEdition>
+               <cei:bibl/>
+            </cei:listBiblEdition>
+         </cei:diplomaticAnalysis>
+         <cei:lang_MOM/>
+      </cei:chDesc>
+      <cei:tenor>
+         <cei:p>
+            <cei:lb n="1"/>
+            <cei:persName>
+               <cei:w xml:id="w_Fontenay_1"> Stephanus </cei:w>
+               <cei:pc xml:id="pc_Fontenay_1">,</cei:pc>
+               <cei:w xml:id="w_Fontenay_2">
+                  <cei:choice>
+                     <cei:expan ana="ori:align-no">de</cei:expan>
+                     <cei:abbr>δ̄</cei:abbr>
+                  </cei:choice>i</cei:w>
+               <cei:w xml:id="w_Fontenay_3">
+                  <cei:choice>
+                     <cei:expan ana="ori:align-no">gratia</cei:expan>
+                     <cei:abbr>grā</cei:abbr>
+                  </cei:choice>
+               </cei:w>
+               <cei:w xml:id="w_Fontenay_4">Eduenſiſ</cei:w>
+               <cei:w xml:id="w_Fontenay_5">
+                  <cei:choice>
+                     <cei:expan ana="ori:align-no">episcopus</cei:expan>
+                     <cei:abbr>ep̄s</cei:abbr>
+                  </cei:choice>
+               </cei:w>
+            </cei:persName>
+            <cei:pc xml:id="pc_Fontenay_2">,</cei:pc>
+            <cei:w xml:id="w_Fontenay_6">dilecto</cei:w>
+            <cei:w xml:id="w_Fontenay_7">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">fratr</cei:expan>
+                  <cei:abbr>fr̃</cei:abbr>
+               </cei:choice>i</cei:w>
+            <cei:persName>
+               <cei:w xml:id="w_Fontenay_8">Willelmo</cei:w>
+               <cei:w xml:id="w_Fontenay_9">
+                  <cei:choice>
+                     <cei:expan ana="ori:align-no">abbat</cei:expan>
+                     <cei:abbr>abb̃</cei:abbr>
+                  </cei:choice>i</cei:w>
+               <cei:w xml:id="w_Fontenay_10">Fonteneti</cei:w>
+            </cei:persName>
+            <cei:w xml:id="w_Fontenay_11">o<cei:choice>
+                  <cei:expan ana="ori:align-no">mn</cei:expan>
+                  <cei:abbr>m̃</cei:abbr>
+               </cei:choice>ibuſ<cei:choice>
+                  <cei:expan ana="ori:align-no">que</cei:expan>
+                  <cei:abbr>q;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_12">in</cei:w>
+            <cei:w xml:id="w_Fontenay_13">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>petuum</cei:w>
+            <cei:w xml:id="w_Fontenay_14">ibid<cei:choice>
+                  <cei:expan ana="ori:align-no">em</cei:expan>
+                  <cei:abbr>ẽ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:lb n="2"/>
+            <cei:w xml:id="w_Fontenay_15">reg<cei:choice>
+                  <cei:expan ana="ori:align-no">ul</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>ariter</cei:w>
+            <cei:w xml:id="w_Fontenay_16">ſubſtituendiſ</cei:w>
+            <cei:pc xml:id="pc_Fontenay_3">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_17">Quia</cei:w>
+            <cei:w xml:id="w_Fontenay_18">dign<cei:choice>
+                  <cei:expan ana="ori:align-no">um</cei:expan>
+                  <cei:abbr>ũ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_19">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">est</cei:expan>
+                  <cei:abbr>ẽ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_20">juſtiſ</cei:w>
+            <cei:w xml:id="w_Fontenay_21">petitionibuſ</cei:w>
+            <cei:w xml:id="w_Fontenay_22">aſſenſum</cei:w>
+            <cei:w xml:id="w_Fontenay_23">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>bere</cei:w>
+            <cei:pc xml:id="pc_Fontenay_4">,</cei:pc>
+            <cei:w xml:id="w_Fontenay_24">petitioni</cei:w>
+            <cei:w xml:id="w_Fontenay_25">tuę</cei:w>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_26">immo</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" ana="ori:align-no">imo</cei:rdg>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_27">
+               <cei:seg type="wp" xml:id="wp_Fontenay_27_1" part="I">to</cei:seg>
+               <cei:lb break="no"/>
+               <cei:seg type="wp" xml:id="wp_Fontenay_27_2" part="F">tiuſ</cei:seg>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_28">cui</cei:w>
+            <cei:w xml:id="w_Fontenay_29">preeſ</cei:w>
+            <cei:w xml:id="w_Fontenay_30">ęcc<cei:choice>
+                  <cei:expan ana="ori:align-no">lesi</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>ę</cei:w>
+            <cei:w xml:id="w_Fontenay_31">annuenteſ</cei:w>
+            <cei:w xml:id="w_Fontenay_32">noſ</cei:w>
+            <cei:w xml:id="w_Fontenay_33">quo<cei:choice>
+                  <cei:expan ana="ori:align-no">que</cei:expan>
+                  <cei:abbr>q;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_34">poſt</cei:w>
+            <cei:w xml:id="w_Fontenay_35">ap<cei:choice>
+                  <cei:expan ana="ori:align-no">ostol</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>ica</cei:w>
+            <cei:w xml:id="w_Fontenay_36">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>cepta</cei:w>
+            <cei:w xml:id="w_Fontenay_37">decernimus</cei:w>
+            <cei:w xml:id="w_Fontenay_38">ne</cei:w>
+            <cei:w xml:id="w_Fontenay_39">qua</cei:w>
+            <cei:w xml:id="w_Fontenay_40">v<cei:choice>
+                  <cei:expan ana="ori:align-no">el</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_41">ęcc<cei:choice>
+                  <cei:expan ana="ori:align-no">lesi</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>aſtica</cei:w>
+            <cei:w xml:id="w_Fontenay_42">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">vel</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:lb n="4"/>
+            <cei:w xml:id="w_Fontenay_43">ſecularis</cei:w>
+            <cei:w xml:id="w_Fontenay_44">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>ſona</cei:w>
+            <cei:w xml:id="w_Fontenay_45">aliquid</cei:w>
+            <cei:w xml:id="w_Fontenay_46">δe</cei:w>
+            <cei:w xml:id="w_Fontenay_47">decimis</cei:w>
+            <cei:w xml:id="w_Fontenay_48">poſſeſſionis</cei:w>
+            <cei:w xml:id="w_Fontenay_49">Flaciaci</cei:w>
+            <cei:w xml:id="w_Fontenay_50">vel</cei:w>
+            <cei:w xml:id="w_Fontenay_51">aliarum</cei:w>
+            <cei:w xml:id="w_Fontenay_52">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>dicte</cei:w>
+            <cei:w xml:id="w_Fontenay_53">ęcc<cei:choice>
+                  <cei:expan ana="ori:align-no">lesi</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>ę</cei:w>
+            <cei:w xml:id="w_Fontenay_54">poſſeſſionum</cei:w>
+            <cei:lb n="5"/>
+            <cei:w xml:id="w_Fontenay_55">accipere</cei:w>
+            <cei:w xml:id="w_Fontenay_56">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>ſumat</cei:w>
+            <cei:pc xml:id="pc_Fontenay_5">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_57">Ad</cei:w>
+            <cei:w xml:id="w_Fontenay_58">alimentum</cei:w>
+            <cei:w xml:id="w_Fontenay_59">enim</cei:w>
+            <cei:w xml:id="w_Fontenay_60">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">fratrum</cei:expan>
+                  <cei:abbr>frm̃</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_61">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">de</cei:expan>
+                  <cei:abbr>d̃</cei:abbr>
+               </cei:choice>o</cei:w>
+            <cei:w xml:id="w_Fontenay_62">in</cei:w>
+            <cei:w xml:id="w_Fontenay_63">eadem</cei:w>
+            <cei:w xml:id="w_Fontenay_64">ęcc<cei:choice>
+                  <cei:expan ana="ori:align-no">lesi</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>a</cei:w>
+            <cei:w xml:id="w_Fontenay_65">in</cei:w>
+            <cei:w xml:id="w_Fontenay_66">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>petu<cei:choice>
+                  <cei:expan ana="ori:align-no">um</cei:expan>
+                  <cei:abbr>ũ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_67">ſervientium</cei:w>
+            <cei:w xml:id="w_Fontenay_68">
+               <cei:seg type="wp" xml:id="wp_Fontenay_68_1" part="I">con</cei:seg>
+               <cei:lb break="no"/>
+               <cei:seg type="wp" xml:id="wp_Fontenay_68_2" part="F">cedimuſ</cei:seg>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_69">eiſ</cei:w>
+            <cei:w xml:id="w_Fontenay_70">omnem</cei:w>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_71">eo<cei:choice>
+                        <cei:expan ana="ori:align-no">rum</cei:expan>
+                        <cei:abbr>ꝝ</cei:abbr>
+                     </cei:choice>
+                  </cei:w>
+                  <cei:w xml:id="w_Fontenay_72">decimam</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" ana="ori:align-no">decimam eorum</cei:rdg>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_73">aδ</cei:w>
+            <cei:w xml:id="w_Fontenay_74">cujuſcum<cei:choice>
+                  <cei:expan ana="ori:align-no">que</cei:expan>
+                  <cei:abbr>q;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_75">ęc<cei:choice>
+                        <cei:expan ana="ori:align-no">lesi</cei:expan>
+                        <cei:abbr>ł</cei:abbr>
+                     </cei:choice>arum</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" ana="ori:align-no">ecclesiarum</cei:rdg>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_76">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">nostra</cei:expan>
+                  <cei:abbr>nrã</cei:abbr>
+               </cei:choice>rum</cei:w>
+            <cei:w xml:id="w_Fontenay_77">jus</cei:w>
+            <cei:w xml:id="w_Fontenay_78">antea</cei:w>
+            <cei:w xml:id="w_Fontenay_79">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>tinuerit</cei:w>
+            <cei:pc xml:id="pc_Fontenay_6">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_80">Si</cei:w>
+            <cei:w xml:id="w_Fontenay_81">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">qui</cei:expan>
+                  <cei:abbr>qͥ</cei:abbr>
+               </cei:choice>s</cei:w>
+            <cei:lb n="7"/>
+            <cei:w xml:id="w_Fontenay_82">autem</cei:w>
+            <cei:w xml:id="w_Fontenay_83">contra</cei:w>
+            <cei:w xml:id="w_Fontenay_84">hęc</cei:w>
+            <cei:w xml:id="w_Fontenay_85">ſcienter</cei:w>
+            <cei:w xml:id="w_Fontenay_86">egerit</cei:w>
+            <cei:pc xml:id="pc_Fontenay_7">,</cei:pc>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_87">anatematis</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" ana="ori:align-no">anathematis</cei:rdg>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_88">eum</cei:w>
+            <cei:w xml:id="w_Fontenay_89">diſtrictione</cei:w>
+            <cei:w xml:id="w_Fontenay_90">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>cellimus</cei:w>
+            <cei:w xml:id="w_Fontenay_91">donec</cei:w>
+            <cei:w xml:id="w_Fontenay_92">reatus</cei:w>
+            <cei:lb n="8"/>
+            <cei:w xml:id="w_Fontenay_93">ſui</cei:w>
+            <cei:w xml:id="w_Fontenay_94">facinuſ</cei:w>
+            <cei:w xml:id="w_Fontenay_95">congrua</cei:w>
+            <cei:w xml:id="w_Fontenay_96">emenδet</cei:w>
+            <cei:w xml:id="w_Fontenay_97">ſatiſfactione</cei:w>
+            <cei:pc xml:id="pc_Fontenay_8">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_98">Vicinis</cei:w>
+            <cei:w xml:id="w_Fontenay_99">autem</cei:w>
+            <cei:w xml:id="w_Fontenay_100">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">presbiter</cei:expan>
+                  <cei:abbr>pb̃r</cei:abbr>
+               </cei:choice>iſ</cei:w>
+            <cei:w xml:id="w_Fontenay_101">tam</cei:w>
+            <cei:w xml:id="w_Fontenay_102">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>ſentibus</cei:w>
+            <cei:w xml:id="w_Fontenay_103">qu<cei:choice>
+                  <cei:expan ana="ori:align-no">am</cei:expan>
+                  <cei:abbr>ã</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_104">
+               <cei:seg type="wp" xml:id="wp_Fontenay_104_1" part="I">futu</cei:seg>
+               <cei:lb break="no"/>
+               <cei:seg type="wp" xml:id="wp_Fontenay_104_2" part="F">ris</cei:seg>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_105">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>ſenti</cei:w>
+            <cei:w xml:id="w_Fontenay_106">decreto</cei:w>
+            <cei:w xml:id="w_Fontenay_107">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pre</cei:expan>
+                  <cei:abbr>p̃</cei:abbr>
+               </cei:choice>cipimus</cei:w>
+            <cei:w xml:id="w_Fontenay_108">ut</cei:w>
+            <cei:w xml:id="w_Fontenay_109">ſu<cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_110">qu<cei:choice>
+                  <cei:expan ana="ori:align-no">em</cei:expan>
+                  <cei:abbr>ẽ</cei:abbr>
+               </cei:choice>c<cei:choice>
+                  <cei:expan ana="ori:align-no">um</cei:expan>
+                  <cei:abbr>ũ</cei:abbr>
+               </cei:choice>
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">que</cei:expan>
+                  <cei:abbr>q;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_111">clamorem</cei:w>
+            <cei:w xml:id="w_Fontenay_112">ęcc<cei:choice>
+                  <cei:expan ana="ori:align-no">lesi</cei:expan>
+                  <cei:abbr>ł</cei:abbr>
+               </cei:choice>ę</cei:w>
+            <cei:w xml:id="w_Fontenay_113">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">vestr</cei:expan>
+                  <cei:abbr>vr̃</cei:abbr>
+               </cei:choice>ę</cei:w>
+            <cei:w xml:id="w_Fontenay_114">de</cei:w>
+            <cei:w xml:id="w_Fontenay_115">dampnis</cei:w>
+            <cei:w xml:id="w_Fontenay_116">ejus</cei:w>
+            <cei:w xml:id="w_Fontenay_117">ſive</cei:w>
+            <cei:lb n="10"/>
+            <cei:w xml:id="w_Fontenay_118">δe</cei:w>
+            <cei:w xml:id="w_Fontenay_119">antiqua</cei:w>
+            <cei:w xml:id="w_Fontenay_120">laicorum</cei:w>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_121">
+                     <cei:choice>
+                        <cei:expan ana="ori:align-no">pre</cei:expan>
+                        <cei:abbr>p̃</cei:abbr>
+                     </cei:choice>ſumtione</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" ana="ori:align-no">presumptione</cei:rdg>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_122">in</cei:w>
+            <cei:w xml:id="w_Fontenay_123">δecimas</cei:w>
+            <cei:w xml:id="w_Fontenay_124">ſeu</cei:w>
+            <cei:w xml:id="w_Fontenay_125">de</cei:w>
+            <cei:w xml:id="w_Fontenay_126">aliis</cei:w>
+            <cei:w xml:id="w_Fontenay_127">audierint</cei:w>
+            <cei:w xml:id="w_Fontenay_128">pleniſſimam</cei:w>
+            <cei:w xml:id="w_Fontenay_129">de</cei:w>
+            <cei:w xml:id="w_Fontenay_130">eo</cei:w>
+            <cei:w xml:id="w_Fontenay_131">
+               <cei:seg type="wp" xml:id="wp_Fontenay_131_1" part="I">juſ</cei:seg>
+               <cei:lb break="no"/>
+               <cei:seg type="wp" xml:id="wp_Fontenay_131_2" part="F">titiam</cei:seg>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_132">faciant</cei:w>
+            <cei:w xml:id="w_Fontenay_133">nec</cei:w>
+            <cei:w xml:id="w_Fontenay_134">uſ<cei:choice>
+                  <cei:expan ana="ori:align-no">que</cei:expan>
+                  <cei:abbr>q;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_135">ad</cei:w>
+            <cei:w xml:id="w_Fontenay_136">congruam</cei:w>
+            <cei:w xml:id="w_Fontenay_137">relaxent</cei:w>
+            <cei:w xml:id="w_Fontenay_138">emendationem</cei:w>
+            <cei:pc xml:id="pc_Fontenay_9">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_139">Alioquin</cei:w>
+            <cei:w xml:id="w_Fontenay_140">officii</cei:w>
+            <cei:w xml:id="w_Fontenay_141">ſui</cei:w>
+            <cei:lb n="12"/>
+            <cei:w xml:id="w_Fontenay_142">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">per</cei:expan>
+                  <cei:abbr>ꝑ</cei:abbr>
+               </cei:choice>iculum</cei:w>
+            <cei:w xml:id="w_Fontenay_143">incurſuros</cei:w>
+            <cei:w xml:id="w_Fontenay_144">ſe</cei:w>
+            <cei:w xml:id="w_Fontenay_145">noverint</cei:w>
+            <cei:pc xml:id="pc_Fontenay_10">,</cei:pc>
+            <cei:w xml:id="w_Fontenay_146">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">et</cei:expan>
+                  <cei:abbr>&amp;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_147">a</cei:w>
+            <cei:w xml:id="w_Fontenay_148">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">Domin</cei:expan>
+                  <cei:abbr>dñ</cei:abbr>
+               </cei:choice>o</cei:w>
+            <cei:w xml:id="w_Fontenay_149">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">pro</cei:expan>
+                  <cei:abbr>ꝓ</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_150">quo</cei:w>
+            <cei:w xml:id="w_Fontenay_151">zelare</cei:w>
+            <cei:w xml:id="w_Fontenay_152">aut</cei:w>
+            <cei:w xml:id="w_Fontenay_153">nolunt</cei:w>
+            <cei:w xml:id="w_Fontenay_154">aut</cei:w>
+            <cei:w xml:id="w_Fontenay_155">trepiδant </cei:w>
+            <cei:lb n="13"/>
+            <cei:w xml:id="w_Fontenay_156">malum</cei:w>
+            <cei:w xml:id="w_Fontenay_157">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">quod</cei:expan>
+                  <cei:abbr>qδ̃</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_158">meren<cei:choice>
+                  <cei:expan ana="ori:align-no">tur</cei:expan>
+                  <cei:abbr>t᷑</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_159">ſi</cei:w>
+            <cei:w xml:id="w_Fontenay_160">non</cei:w>
+            <cei:w xml:id="w_Fontenay_161">emendaverint</cei:w>
+            <cei:w xml:id="w_Fontenay_162">recepturos</cei:w>
+            <cei:pc xml:id="pc_Fontenay_11">.</cei:pc>
+            <cei:space/>
+            <cei:lb n="14"/>
+            <cei:w xml:id="w_Fontenay_163">Actum</cei:w>
+            <cei:w xml:id="w_Fontenay_164">est</cei:w>
+            <cei:app>
+               <cei:lem>
+                  <cei:w xml:id="w_Fontenay_165">hoc</cei:w>
+               </cei:lem>
+               <cei:rdg wit="B" rend="omis" ana="ori:align-no"/>
+            </cei:app>
+            <cei:w xml:id="w_Fontenay_166">Eduę</cei:w>
+            <cei:w xml:id="w_Fontenay_167">in</cei:w>
+            <cei:w xml:id="w_Fontenay_168">plena</cei:w>
+            <cei:w xml:id="w_Fontenay_169">ſynodo</cei:w>
+            <cei:date value="">
+               <cei:app>
+                  <cei:lem>
+                     <cei:pc xml:id="pc_Fontenay_12">.</cei:pc>
+                     <cei:w xml:id="w_Fontenay_170">XV</cei:w>
+                     <cei:pc xml:id="pc_Fontenay_13">.</cei:pc>
+                  </cei:lem>
+                  <cei:rdg wit="B" ana="ori:align-no">XV°</cei:rdg>
+               </cei:app>
+               <cei:w xml:id="w_Fontenay_171">kl</cei:w>
+               <cei:pc xml:id="pc_Fontenay_14">.</cei:pc>
+               <cei:w xml:id="w_Fontenay_172">julii</cei:w>
+            </cei:date>
+            <cei:pc xml:id="pc_Fontenay_15">,</cei:pc>
+            <cei:w xml:id="w_Fontenay_173">laudanti<cei:choice>
+                  <cei:expan ana="ori:align-no">bus</cei:expan>
+                  <cei:abbr>b;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_174">archidiaconi<cei:choice>
+                  <cei:expan ana="ori:align-no">bus</cei:expan>
+                  <cei:abbr>b;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:persName>
+               <cei:w xml:id="w_Fontenay_175">Gaufrido</cei:w>
+            </cei:persName>
+            <cei:pc xml:id="pc_Fontenay_16">,</cei:pc>
+            <cei:lb n="15"/>
+            <cei:persName>
+               <cei:app>
+                  <cei:lem>
+                     <cei:w xml:id="w_Fontenay_176">Seguino</cei:w>
+                  </cei:lem>
+                  <cei:rdg wit="B" ana="ori:align-no">Siguino</cei:rdg>
+               </cei:app>
+            </cei:persName>
+            <cei:pc xml:id="pc_Fontenay_17">,</cei:pc>
+            <cei:persName>
+               <cei:w xml:id="w_Fontenay_177">Humberto</cei:w>
+            </cei:persName>
+            <cei:w xml:id="w_Fontenay_178">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">et</cei:expan>
+                  <cei:abbr>&amp;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_179">tota</cei:w>
+            <cei:w xml:id="w_Fontenay_180">ſynodo</cei:w>
+            <cei:pc xml:id="pc_Fontenay_18">.</cei:pc>
+            <cei:w xml:id="w_Fontenay_181">Et</cei:w>
+            <cei:w xml:id="w_Fontenay_182">ego</cei:w>
+            <cei:persName>
+               <cei:w xml:id="w_Fontenay_183">Stephanuſ</cei:w>
+               <cei:w xml:id="w_Fontenay_184">Eduenſiſ</cei:w>
+               <cei:w xml:id="w_Fontenay_185">ecc<cei:choice>
+                     <cei:expan ana="ori:align-no">lesi</cei:expan>
+                     <cei:abbr>ł</cei:abbr>
+                  </cei:choice>e</cei:w>
+               <cei:w xml:id="w_Fontenay_186">
+                  <cei:choice>
+                     <cei:expan ana="ori:align-no">episcopus</cei:expan>
+                     <cei:abbr>epc</cei:abbr>
+                  </cei:choice>
+               </cei:w>
+            </cei:persName>
+            <cei:w xml:id="w_Fontenay_187">ſigillo</cei:w>
+            <cei:w xml:id="w_Fontenay_188">meo</cei:w>
+            <cei:lb n="16"/>
+            <cei:w xml:id="w_Fontenay_189">munio</cei:w>
+            <cei:w xml:id="w_Fontenay_190">
+               <cei:choice>
+                  <cei:expan ana="ori:align-no">et</cei:expan>
+                  <cei:abbr>&amp;</cei:abbr>
+               </cei:choice>
+            </cei:w>
+            <cei:w xml:id="w_Fontenay_191">confirmo</cei:w>
+            <cei:pc xml:id="pc_Fontenay_19">.</cei:pc>
+            <cei:space/>
+         </cei:p>
+      </cei:tenor>
+   </cei:body>
+   <cei:back>
+      <cei:persName/>
+      <cei:placeName type="Region"/>
+      <cei:index indexName="illurk-vocabulary" lemma="Initials"/>
+      <cei:index indexName="illurk-vocabulary" lemma="Historiated"/>
+      <cei:index indexName="illurk-vocabulary" lemma="WithAdditionalColours"/>
+      <cei:index indexName="illurk-vocabulary" lemma="ExecutionPainted"/>
+      <cei:index indexName="illurk-vocabulary" lemma="DD-nh-Initials"/>
+      <cei:divNotes>
+         <cei:note/>
+      </cei:divNotes>
+      <cei:class/>
+   </cei:back>
+</cei:text>
