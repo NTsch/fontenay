@@ -4589,6 +4589,7 @@
                     <xs:element ref="foreign"/>
                     <xs:element ref="note"/>
                     <xs:group ref="Originalbefund"/>
+                    <xs:group ref="Sachauszeichnung"/> <!--Erweiterung-->
                 </xs:choice>
             </xs:sequence>
             <xs:attributeGroup ref="lang"/>
