@@ -48,7 +48,7 @@
             </cei:front>
             <cei:body>
                 <cei:idno>
-                    <xsl:text>Fontenay-ID:</xsl:text>
+                    <xsl:text>Fontenay-ID: </xsl:text>
                     <xsl:value-of select="count(preceding::TEI) + 1"/>
                 </cei:idno>
                 <cei:chDesc>
@@ -56,6 +56,13 @@
                         <xsl:value-of select="teiHeader/profileDesc/abstract"/>
                     </cei:abstract>
                     <cei:issued>
+                        <xsl:if test="teiHeader/fileDesc/sourceDesc/listWit//witness/msDesc/history">
+                            <cei:placeName>
+                                <xsl:value-of
+                                    select="teiHeader/fileDesc/sourceDesc/listWit//witness/msDesc/history"
+                                />
+                            </cei:placeName>
+                        </xsl:if>
                         <xsl:apply-templates select="teiHeader/profileDesc/creation"/>
                     </cei:issued>
                     <xsl:for-each select="teiHeader/fileDesc/sourceDesc/listWit/witness">
@@ -75,14 +82,7 @@
                         </xsl:for-each>
                     </cei:witListPar>
                     <cei:diplomaticAnalysis>
-                        <cei:listBibl>
-                            <xsl:for-each select="teiHeader/fileDesc/sourceDesc/listBibl/bibl">
-                                <cei:bibl>
-                                    <!--Attribute überprüfen!-->
-                                    <xsl:apply-templates/>
-                                </cei:bibl>
-                            </xsl:for-each>
-                        </cei:listBibl>
+                        <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listBibl"/>
                         <cei:listBiblRegest>
                             <cei:bibl/>
                         </cei:listBiblRegest>
@@ -92,17 +92,38 @@
                         <cei:listBiblErw>
                             <cei:bibl/>
                         </cei:listBiblErw>
-                        <xsl:if test="teiHeader/profileDesc/creation/date/note">
-                            <cei:p>
-                                <xsl:apply-templates
-                                    select="teiHeader/profileDesc/creation/date/note"/>
-                            </cei:p>
-                        </xsl:if>
                         <cei:quoteOriginaldatierung/>
                         <cei:nota/>
                         <cei:listBiblEdition>
                             <cei:bibl/>
                         </cei:listBiblEdition>
+                        <xsl:if test="teiHeader/profileDesc/creation/date/note">
+                            <cei:p>
+                                <xsl:value-of select="teiHeader/profileDesc/creation/date/note"/>
+                            </cei:p>
+                        </xsl:if>
+                        <xsl:for-each
+                            select=".//witness/msDesc/physDesc/objectDesc/layoutDesc/layout">
+                            <cei:p>
+                                <xsl:attribute name="n">
+                                    <xsl:value-of select="ancestor::witness/@n"/>
+                                    <xsl:text>-layout</xsl:text>
+                                </xsl:attribute> Columns:<xsl:value-of
+                                    select="ancestor::witness/msDesc/physDesc/objectDesc/layoutDesc/layout/@columns"
+                                /> Lines:<xsl:value-of
+                                    select="ancestor::witness/msDesc/physDesc/objectDesc/layoutDesc/layout/@writtenLines"/>
+                                <xsl:apply-templates/>
+                            </cei:p>
+                        </xsl:for-each>
+                        <xsl:for-each select=".//witness/msDesc/physDesc/handDesc">
+                            <cei:p>
+                                <xsl:attribute name="n">
+                                    <xsl:value-of select="ancestor::witness/@n"/>
+                                    <xsl:text>-handDesc</xsl:text>
+                                </xsl:attribute>
+                                <xsl:value-of select="."/>
+                            </cei:p>
+                        </xsl:for-each>
                     </cei:diplomaticAnalysis>
                     <cei:lang_MOM/>
                 </cei:chDesc>
@@ -119,7 +140,14 @@
                 <cei:index indexName="illurk-vocabulary" lemma="ExecutionPainted"/>
                 <cei:index indexName="illurk-vocabulary" lemma="DD-nh-Initials"/>
                 <cei:divNotes>
-                    <cei:note/>
+                    <xsl:for-each select=".//witness/msDesc/physDesc/additions">
+                        <cei:note>
+                            <xsl:attribute name="place">
+                                <xsl:value-of select="ancestor::witness/@n"/>
+                            </xsl:attribute>
+                            <xsl:apply-templates/>
+                        </cei:note>
+                    </xsl:for-each>
                 </cei:divNotes>
                 <cei:class/>
             </cei:back>
@@ -127,10 +155,53 @@
     </xsl:template>
 
     <xsl:template
-        match="add | additions | app | author | bibl | ex | foreign | gap | geogName | handShift | height | lem | listBibl | name | note | orgName | p | persName | placeName | soCalled | surName | teiHeader | title | width">
+        match="additions | addName | author | ex | geogName | handShift | height | name | note | orgName | p | persName | placeName | soCalled | surname | teiHeader | title | width">
         <xsl:element name="cei:{local-name()}">
             <xsl:apply-templates/>
         </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="add | app | damage | figure | hi | lb | lem | pc | space | supplied">
+        <xsl:element name="cei:{local-name()}">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="pb | pc | seg | w">
+        <xsl:element name="cei:{local-name()}">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="bibl | listBibl">
+        <xsl:element name="cei:{local-name()}">
+            <xsl:copy-of select="@*[name() != 'default']"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="bibl/note">
+        <xsl:value-of select="."/>
+    </xsl:template>
+
+    <xsl:template match="gap">
+        <cei:space>
+            <xsl:apply-templates/>
+        </cei:space>
+    </xsl:template>
+
+    <xsl:template match="soCalled">
+        <cei:w>
+            <xsl:attribute name="note">
+                <xsl:value-of select="name()"/>
+            </xsl:attribute>
+            <xsl:value-of select="."/>
+        </cei:w>
     </xsl:template>
 
     <xsl:template match="sic">
@@ -140,25 +211,18 @@
                     <xsl:value-of select="following-sibling::corr"/>
                 </xsl:attribute>
             </xsl:if>
+            <xsl:if test="@rend">
+                <xsl:attribute name="rend">
+                    <xsl:value-of select="@rend"/>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates/>
         </cei:sic>
     </xsl:template>
-    
+
     <xsl:template match="corr"/>
 
     <xsl:template match="roleName">
-        <cei:rolename>
-            <xsl:apply-templates/>
-        </cei:rolename>
-    </xsl:template>
-
-    <xsl:template match="name">
-        <cei:forename>
-            <xsl:apply-templates/>
-        </cei:forename>
-    </xsl:template>
-
-    <xsl:template match="surname">
         <cei:rolename>
             <xsl:apply-templates/>
         </cei:rolename>
@@ -181,11 +245,12 @@
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="damage | figure | graphic | hi | pc | space | supplied">
-        <xsl:element name="cei:{local-name()}">
-            <xsl:copy-of select="@*"/>
-            <xsl:apply-templates/>
-        </xsl:element>
+    <xsl:template match="foreign">
+        <cei:foreign>
+            <xsl:attribute name="lang">
+                <xsl:value-of select="@xml:lang"/>
+            </xsl:attribute>
+        </cei:foreign>
     </xsl:template>
 
     <xsl:template match="graphic">
@@ -195,56 +260,18 @@
         </cei:pict>
     </xsl:template>
 
-    <!--Hinzugefügte Elemente-->
-
-    <xsl:template match="w">
-        <cei:w>
-            <xsl:attribute name="id">
-                <xsl:value-of select="@xml:id"/>
-            </xsl:attribute>
+    <xsl:template match="num">
+        <cei:num>
+            <xsl:attribute name="value">99999999</xsl:attribute>
             <xsl:apply-templates/>
-        </cei:w>
-    </xsl:template>
-
-    <xsl:template match="pc">
-        <cei:pc>
-            <xsl:apply-templates/>
-        </cei:pc>
-    </xsl:template>
-
-    <!--Hinzugefügte Elemente-->
-
-    <xsl:template match="seg">
-        <cei:seg>
-            <xsl:attribute name="id">
-                <xsl:value-of select="@xml:id"/>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </cei:seg>
+        </cei:num>
     </xsl:template>
 
     <xsl:template match="rdg">
         <cei:rdg>
-            <xsl:copy-of select="@wit"/>
-            <xsl:copy-of select="@rend"/>
+            <xsl:copy-of select="@*[name() != 'ana']"/>
             <xsl:apply-templates/>
         </cei:rdg>
-    </xsl:template>
-
-    <xsl:template match="lb">
-        <cei:lb>
-            <xsl:copy-of select="@n"/>
-            <xsl:apply-templates/>
-        </cei:lb>
-    </xsl:template>
-
-    <xsl:template match="pb">
-        <cei:pb>
-            <xsl:attribute name="id">
-                <xsl:value-of select="@xml:id"/>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </cei:pb>
     </xsl:template>
 
     <xsl:template match="date">
@@ -273,6 +300,11 @@
             <xsl:attribute name="abbr">
                 <xsl:value-of select="abbr"/>
             </xsl:attribute>
+            <xsl:if test="./abbr/@rend">
+                <xsl:attribute name="type">
+                    <xsl:value-of select="./abbr/@rend"/>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates select="expan"/>
         </cei:expan>
     </xsl:template>
@@ -335,22 +367,8 @@
                     select="msDesc/physDesc/objectDesc/supportDesc/extent/dimensions[2]"/>
             </cei:dimensions>
             <cei:condition/>
-            <!--<cei:additions>
-                <xsl:value-of select="msDesc/physDesc/additions"/>
-            </cei:additions> 
-            <cei:p> Columns:<xsl:value-of
-                    select="msDesc/physDesc/objectDesc/layoutDesc/layout/@columns"/>
-                    Lines:<xsl:value-of
-                    select="msDesc/physDesc/objectDesc/layoutDesc/layout/@writtenLines"/>
-                <xsl:value-of select="msDesc/physDesc/objectDesc/layoutDesc/layout"/>
-            </cei:p>
-            <cei:p>
-                <xsl:value-of select="msDesc/physDesc/handDesc"/>
-            </cei:p>-->
-            <!--TESTZWECKE!!!-->
         </cei:physicalDesc>
         <cei:auth>
-            <!--vorhanden?-->
             <cei:notariusDesc/>
             <cei:sealDesc/>
         </cei:auth>

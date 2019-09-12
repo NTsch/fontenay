@@ -7,7 +7,8 @@
             <xs:documentation xml:lang="deu"> Wurzelelement für alle Dokumente, die den Regeln der
                 CEI (Charters Encoding Initiative, http://www.cei.lmu.de) folgen. CEI-Ableger mit
                 Angaben zur EditMOM-Verarbeitung als appinfo und verringert auf ein
-                Auszeichnungskonzept für Monasterium.net 2006-05-21 Änderungen: 2016-05-28: (lem|rdg)@wit eingeführt 2015-10-17: supplied hinzugefügt (GV) 2010-02-08:
+                Auszeichnungskonzept für Monasterium.net 2006-05-21 Änderungen: 2016-05-28:
+                (lem|rdg)@wit eingeführt 2015-10-17: supplied hinzugefügt (GV) 2010-02-08:
                 group:layout als Kind von abstract eingeführt 2009-11-20: listBibl wieder eingeführt
                 2009-09-04: minOccurs="1" und maxOccurs="1" für Elemente "body/idno", "issued" und
                 "date_sort" für Validierung beim Import eingeführt (JG) 2009-09-03: persName als
@@ -38,23 +39,22 @@
                 (GV) 2006-05-18: sourceDescVolltext ergänzt und kleinere editMOM-Ergänzungen (GV)
                 2006-05-17: sourceDesc aufgeräumt; Versuch alle Elemente, die in die Maske kommen,
                 global zu definieren; note aus den Fließtexten geworfen. (GV) 2006-05-16: expan
-                statt abbr für Abkürzung, note/index als eigener Reiter, &lt;caption
-                xml:lang="deu"> eingefügt; Attribute (z.B. id/n) mit
-                &lt;present>no&lt;/present> versehen. Menü "Siegelbeschreibung" ergänzt.
-                &lt;sup> in p und abstract zugelassen, aber nicht in Menüs übernommen, denn diese
-                Tags müssen noch nachbearbeitet werden. (GV) 2006-05-11 Einige Elemente, die in
-                Fließtextfeldern auftauchen, global definiert (pTenor, a, legend), in einigen Fällen
-                &lt;present>no&lt;/present> eingefügt (group etc.) (GV) 2006-05-09 Knoten, die
-                selber nicht angezeigt werden und keine anzuzeigenden Subknoten haben, sind mit dem
-                Attribut &lt;present>no&lt;/present> in der EditMOM-appinfo versehen. Alle
-                Elemente, die als Fließtext auftauchen können, sind global definiert. (GV)
-                2006-05-02 listBibl (listBiblEdition, listBiblRegest, listBiblFaksimile,
-                listBiblErw), sourceDesc (sourceDescRegest), p (p, pTenor) typisiert, um in der
-                Anzeige differenzieren zu können. EditMOM:Auswahlliste eingeführt. (GV) 2006-04-25
-                Weitere &lt;tab>-hinzugefügt. (GV) 2006-04-06 Innerhalb von hi Formular
-                zugelassen; issuer verzweigt wie persName, persName kann auch note enthalten.
-                Weitere Attributlisten plausibler aufgereiht. (GV) 2006-04-05 Reihenfolge der
-                Tenorelemente plausibler angeordnet, hi::target in hi::type korrigiert, ein paar
+                statt abbr für Abkürzung, note/index als eigener Reiter, &lt;caption xml:lang="deu">
+                eingefügt; Attribute (z.B. id/n) mit &lt;present>no&lt;/present> versehen. Menü
+                "Siegelbeschreibung" ergänzt. &lt;sup> in p und abstract zugelassen, aber nicht in
+                Menüs übernommen, denn diese Tags müssen noch nachbearbeitet werden. (GV) 2006-05-11
+                Einige Elemente, die in Fließtextfeldern auftauchen, global definiert (pTenor, a,
+                legend), in einigen Fällen &lt;present>no&lt;/present> eingefügt (group etc.) (GV)
+                2006-05-09 Knoten, die selber nicht angezeigt werden und keine anzuzeigenden
+                Subknoten haben, sind mit dem Attribut &lt;present>no&lt;/present> in der
+                EditMOM-appinfo versehen. Alle Elemente, die als Fließtext auftauchen können, sind
+                global definiert. (GV) 2006-05-02 listBibl (listBiblEdition, listBiblRegest,
+                listBiblFaksimile, listBiblErw), sourceDesc (sourceDescRegest), p (p, pTenor)
+                typisiert, um in der Anzeige differenzieren zu können. EditMOM:Auswahlliste
+                eingeführt. (GV) 2006-04-25 Weitere &lt;tab>-hinzugefügt. (GV) 2006-04-06 Innerhalb
+                von hi Formular zugelassen; issuer verzweigt wie persName, persName kann auch note
+                enthalten. Weitere Attributlisten plausibler aufgereiht. (GV) 2006-04-05 Reihenfolge
+                der Tenorelemente plausibler angeordnet, hi::target in hi::type korrigiert, ein paar
                 Attributlisten plausibler aufgereiht. (GV) 2006-03-28 p aus dem Originalbefund
                 direkt unterhalb von tenor verschoben, um sachlich fehlerhafte Rekursionen zu
                 vermeiden (GV) 2006-03-19 (Ausgangsversion) </xs:documentation>
@@ -90,12 +90,12 @@
                                         <xs:element name="titleStmt">
                                             <xs:annotation>
                                                 <xs:appinfo source="EditVDU">
-                                                    <xrxe:label>
-                                                        <xrx:i18n>
-                                                            <xrx:key>cei_titleStmt</xrx:key>
-                                                            <xrx:default>titleStmt</xrx:default>
-                                                        </xrx:i18n>
-                                                    </xrxe:label>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_titleStmt</xrx:key>
+                                                  <xrx:default>titleStmt</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
                                                 </xs:appinfo>
                                                 <xs:documentation xml:lang="deu"> Den Regeln der TEI
                                                   entsprechend müßten hier verschiedene Elemente
@@ -109,14 +109,14 @@
                                                   <xs:element name="author">
                                                   <xs:annotation>
                                                   <xs:appinfo source="EditVDU">
-                                                                    <xrxe:label>
-                                                                        <xrx:i18n>
-                                                                            <xrx:key>cei_author</xrx:key>
-                                                                            <xrx:default>author</xrx:default>
-                                                                        </xrx:i18n>
-                                                                    </xrxe:label>
-                                                                    <xrxe:relevant>false</xrxe:relevant>
-                                                                </xs:appinfo>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_author</xrx:key>
+                                                  <xrx:default>author</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
+                                                  <xrxe:relevant>false</xrxe:relevant>
+                                                  </xs:appinfo>
                                                   </xs:annotation>
                                                   </xs:element>
                                                   <xs:element ref="p"/>
@@ -129,13 +129,13 @@
                                         <xs:element minOccurs="0" name="sourceDesc">
                                             <xs:annotation>
                                                 <xs:appinfo source="EditVDU">
-                                                    <xrxe:label>
-                                                        <xrx:i18n>
-                                                            <xrx:key>cei_sourceDesc</xrx:key>
-                                                            <xrx:default>sourceDesc</xrx:default>
-                                                        </xrx:i18n>
-                                                    </xrxe:label>
-                                                    <xrxe:relevant>false</xrxe:relevant>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_sourceDesc</xrx:key>
+                                                  <xrx:default>sourceDesc</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
+                                                  <xrxe:relevant>false</xrxe:relevant>
                                                 </xs:appinfo>
                                                 <xs:documentation xml:lang="deu"> enthält die
                                                   bibliographischen Angaben der Quellen, aus denen
@@ -388,10 +388,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_sourceDesc</xrx:key>
-                                                        <xrx:default>sourceDesc</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_sourceDesc</xrx:key>
+                                                  <xrx:default>sourceDesc</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                             </xs:appinfo>
                                         </xs:annotation>
@@ -401,13 +401,13 @@
                                                   <xs:element name="sourceDescRegest">
                                                   <xs:annotation>
                                                   <xs:appinfo source="EditVDU">
-                                                                <xrxe:label>
-                                                                    <xrx:i18n>
-                                                                        <xrx:key>cei_sourceDescRegest</xrx:key>
-                                                                        <xrx:default>sourceDescRegest</xrx:default>
-                                                                    </xrx:i18n>
-                                                                </xrxe:label>
-                                                            </xs:appinfo>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_sourceDescRegest</xrx:key>
+                                                  <xrx:default>sourceDescRegest</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
+                                                  </xs:appinfo>
                                                   <xs:documentation xml:lang="deu">
                                                   CEI_MOM-spezifisch: Eigentlich eine SourceDesc,
                                                   die über ein Schlüsselwort "Regest" auf die Quelle
@@ -423,9 +423,11 @@
                                                   </xs:element>
                                                   </xs:sequence>
                                                   <xs:attribute name="ref">
-                                                        <xs:annotation>
-                                                            <xs:documentation xml:lang="deu"> Verweis auf eine Textpassage, zu der hier die Quelle angegeben wird. </xs:documentation>
-                                                    </xs:annotation>
+                                                  <xs:annotation>
+                                                  <xs:documentation xml:lang="deu"> Verweis auf eine
+                                                  Textpassage, zu der hier die Quelle angegeben
+                                                  wird. </xs:documentation>
+                                                  </xs:annotation>
                                                   </xs:attribute>
                                                   <xs:attributeGroup ref="standard"/>
                                                   </xs:complexType>
@@ -433,13 +435,13 @@
                                                   <xs:element name="sourceDescVolltext">
                                                   <xs:annotation>
                                                   <xs:appinfo source="EditVDU">
-                                                                <xrxe:label>
-                                                                    <xrx:i18n>
-                                                                        <xrx:key>cei_sourceDescVolltext</xrx:key>
-                                                                        <xrx:default>sourceDescVolltext</xrx:default>
-                                                                    </xrx:i18n>
-                                                                </xrxe:label>
-                                                            </xs:appinfo>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_sourceDescVolltext</xrx:key>
+                                                  <xrx:default>sourceDescVolltext</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
+                                                  </xs:appinfo>
                                                   <xs:documentation xml:lang="deu">
                                                   CEI_MOM-spezifisch: Eigentlich eine SourceDesc,
                                                   die über ein Schlüsselwort "Volltext" auf die
@@ -467,8 +469,8 @@
                                                   <xs:element ref="p">
                                                   <xs:annotation>
                                                   <xs:appinfo source="EditVDU">
-                                                                <xrxe:relevant>false</xrxe:relevant>
-                                                            </xs:appinfo>
+                                                  <xrxe:relevant>false</xrxe:relevant>
+                                                  </xs:appinfo>
                                                   </xs:annotation>
                                                   </xs:element>
                                                 </xs:choice>
@@ -509,13 +511,13 @@
                                         <xs:element minOccurs="1" maxOccurs="1" name="idno">
                                             <xs:annotation>
                                                 <xs:appinfo source="EditVDU">
-                                                    <xrxe:label>
-                                                        <xrx:i18n>
-                                                            <xrx:key>cei_idno</xrx:key>
-                                                            <xrx:default>idno</xrx:default>
-                                                        </xrx:i18n>
-                                                    </xrxe:label>
-                                                    <xrxe:relevant>false</xrxe:relevant>
+                                                  <xrxe:label>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_idno</xrx:key>
+                                                  <xrx:default>idno</xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrxe:label>
+                                                  <xrxe:relevant>false</xrxe:relevant>
                                                 </xs:appinfo>
                                                 <xs:documentation xml:lang="deu"> Gibt die
                                                   Identifikationsnummer der Urkunde im aktuellen
@@ -726,34 +728,33 @@
                                         <xs:element ref="date">
                                             <xs:annotation>
                                                 <xs:appinfo source="EditVDU">
-                                                    <xrxe:min-occur>0</xrxe:min-occur>
-                                                    <xrxe:max-occur>1</xrxe:max-occur>
+                                                  <xrxe:min-occur>0</xrxe:min-occur>
+                                                  <xrxe:max-occur>1</xrxe:max-occur>
                                                 </xs:appinfo>
                                                 <xs:documentation>
-                                                    <xrx:description>
-                                                        <xrx:i18n>
-                                                            <xrx:key>cei_issued_date_description</xrx:key>
-                                                            <xrx:default>Datum, an dem die Urkunde ausgestellt
+                                                  <xrx:description>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_issued_date_description</xrx:key>
+                                                  <xrx:default>Datum, an dem die Urkunde ausgestellt
                                                   ist. Die Daten werden im Format 'Jahr Monat (als
                                                   Wort) Tag' angegeben.</xrx:default>
-                                                        </xrx:i18n>
-                                                    </xrx:description>
-                                                    <xrx:example>
-                                                        <xrx:i18n>
-                                                            <xrx:key>cei_issued_date_example</xrx:key>
-                                                            <xrx:default>&lt;cei:date
-                                                  value="16091001">1609 Oktober
-                                                  1&lt;/cei:date></xrx:default>
-                                                        </xrx:i18n>
-                                                    </xrx:example>
+                                                  </xrx:i18n>
+                                                  </xrx:description>
+                                                  <xrx:example>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_issued_date_example</xrx:key>
+                                                  <xrx:default>&lt;cei:date value="16091001">1609
+                                                  Oktober 1&lt;/cei:date></xrx:default>
+                                                  </xrx:i18n>
+                                                  </xrx:example>
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
                                         <xs:element ref="dateRange">
                                             <xs:annotation>
                                                 <xs:appinfo source="EditVDU">
-                                                    <xrxe:min-occur>0</xrxe:min-occur>
-                                                    <xrxe:max-occur>1</xrxe:max-occur>
+                                                  <xrxe:min-occur>0</xrxe:min-occur>
+                                                  <xrxe:max-occur>1</xrxe:max-occur>
                                                 </xs:appinfo>
                                             </xs:annotation>
                                         </xs:element>
@@ -843,10 +844,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_listBibl</xrx:key>
-                                                        <xrx:default>listBibl</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_listBibl</xrx:key>
+                                                  <xrx:default>listBibl</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                                 <xrxe:mixed>false</xrxe:mixed>
                                             </xs:appinfo>
@@ -870,10 +871,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_listBiblEdition</xrx:key>
-                                                        <xrx:default>listBiblEdition</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_listBiblEdition</xrx:key>
+                                                  <xrx:default>listBiblEdition</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                                 <xrxe:mixed>false</xrxe:mixed>
                                             </xs:appinfo>
@@ -897,10 +898,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_listBiblRegest</xrx:key>
-                                                        <xrx:default>listBiblRegest</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_listBiblRegest</xrx:key>
+                                                  <xrx:default>listBiblRegest</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                                 <xrxe:mixed>false</xrxe:mixed>
                                             </xs:appinfo>
@@ -924,10 +925,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_listBiblFaksimile</xrx:key>
-                                                        <xrx:default>listBiblFaksimile</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_listBiblFaksimile</xrx:key>
+                                                  <xrx:default>listBiblFaksimile</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                                 <xrxe:mixed>false</xrxe:mixed>
                                             </xs:appinfo>
@@ -951,10 +952,10 @@
                                         <xs:annotation>
                                             <xs:appinfo source="EditVDU">
                                                 <xrxe:label>
-                                                    <xrx:i18n>
-                                                        <xrx:key>cei_listBiblErw</xrx:key>
-                                                        <xrx:default>listBiblErw</xrx:default>
-                                                    </xrx:i18n>
+                                                  <xrx:i18n>
+                                                  <xrx:key>cei_listBiblErw</xrx:key>
+                                                  <xrx:default>listBiblErw</xrx:default>
+                                                  </xrx:i18n>
                                                 </xrxe:label>
                                                 <xrxe:mixed>false</xrxe:mixed>
                                             </xs:appinfo>
@@ -1193,7 +1194,8 @@
                     </xrx:i18n>
                 </xrxe:label>
             </xs:appinfo>
-            <xs:documentation xml:lang="en">add complex text to a tagged part of the document.</xs:documentation>
+            <xs:documentation xml:lang="en">add complex text to a tagged part of the
+                document.</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:attributeGroup ref="lang"/>
@@ -1567,7 +1569,10 @@
                 <xrxe:relevant>true</xrxe:relevant>
             </xs:appinfo>
             <xs:documentation xml:lang="de">Teilurkundenschnitt</xs:documentation>
-            <xs:documentation xml:lang="en">contains a description of the method how a chirograph/carta partita (cfr. VID 44, http://www.cei.lmu.de/VID/#VID_44) is executed, e.g. the text written in the place of cutting, and/or the form of the cutting.</xs:documentation>
+            <xs:documentation xml:lang="en">contains a description of the method how a
+                chirograph/carta partita (cfr. VID 44, http://www.cei.lmu.de/VID/#VID_44) is
+                executed, e.g. the text written in the place of cutting, and/or the form of the
+                cutting.</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -1591,10 +1596,10 @@
                 <xrxe:content-control>annotation</xrxe:content-control>
                 <xrxe:relevant>false</xrxe:relevant>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu"> Enthält Vermerke des verwahrenden Archivs oder des Empfängers auf der
-                Urkunde.</xs:documentation>
-            <xs:documentation xml:lang="eng">contains notes on the document applied by the preserving archives or the recipient.
-            </xs:documentation>
+            <xs:documentation xml:lang="deu"> Enthält Vermerke des verwahrenden Archivs oder des
+                Empfängers auf der Urkunde.</xs:documentation>
+            <xs:documentation xml:lang="eng">contains notes on the document applied by the
+                preserving archives or the recipient. </xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -1623,8 +1628,10 @@
                 <xrxe:content-control>annotation</xrxe:content-control>
                 <xrxe:relevant>false</xrxe:relevant>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu">Enthält die ersten Wörter des Textes. Im Attribute "type" wird angegeben, auf welchen Textteil es sich bezieht,</xs:documentation>
-            <xs:documentation xml:lang="eng">contains the first words of the text. The attribute "type" specifies if it refers to specific part of the text.</xs:documentation>
+            <xs:documentation xml:lang="deu">Enthält die ersten Wörter des Textes. Im Attribute
+                "type" wird angegeben, auf welchen Textteil es sich bezieht,</xs:documentation>
+            <xs:documentation xml:lang="eng">contains the first words of the text. The attribute
+                "type" specifies if it refers to specific part of the text.</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -2478,7 +2485,8 @@
                 <xrxe:min-occur>0</xrxe:min-occur>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
             </xs:appinfo>
-            <xs:documentation xml:lang="en">clause expressing the request for formal documentation (cf. VID n. 326 http://www.cei.lmu.de/VID/VID.php?326)</xs:documentation>
+            <xs:documentation xml:lang="en">clause expressing the request for formal documentation
+                (cf. VID n. 326 http://www.cei.lmu.de/VID/VID.php?326)</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -2495,7 +2503,8 @@
     </xs:element>
     <xs:element name="intercessio">
         <xs:annotation>
-            <xs:documentation xml:lang="en">part of the text describing the intervention of a third to support a petition (cf. VID n. 328)</xs:documentation>
+            <xs:documentation xml:lang="en">part of the text describing the intervention of a third
+                to support a petition (cf. VID n. 328)</xs:documentation>
             <xs:appinfo source="EditVDU">
                 <xrxe:label>
                     <xrx:i18n>
@@ -2511,7 +2520,8 @@
                 </xrxe:menu-item>
                 <xrxe:min-occur>0</xrxe:min-occur>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
-            </xs:appinfo></xs:annotation>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2973,7 +2983,8 @@
                 <xrxe:min-occur>0</xrxe:min-occur>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu"> enthält Text, der nicht eindeutig lesbar sind. </xs:documentation>
+            <xs:documentation xml:lang="deu"> enthält Text, der nicht eindeutig lesbar sind.
+            </xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -3369,9 +3380,8 @@
                 <xrxe:min-occur>0</xrxe:min-occur>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu">
-                Hinzufügungen von Text, der in der Vorlage nicht dokumentiert ist, durch den Editor.
-            </xs:documentation>
+            <xs:documentation xml:lang="deu"> Hinzufügungen von Text, der in der Vorlage nicht
+                dokumentiert ist, durch den Editor. </xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -3936,7 +3946,7 @@
             <xs:sequence>
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
                     <xs:group ref="Originalbefund"/>
-		    <xs:group ref="Sachauszeichnung"/>
+                    <xs:group ref="Sachauszeichnung"/>
                 </xs:choice>
             </xs:sequence>
             <xs:attributeGroup ref="lang"/>
@@ -4540,7 +4550,8 @@
                 </xrxe:menu-item>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu">ein Familienname oder anderer Beiname, der zur Unterscheidung einer Person z.B. durch Gruppenzuordnung dient.</xs:documentation>
+            <xs:documentation xml:lang="deu">ein Familienname oder anderer Beiname, der zur
+                Unterscheidung einer Person z.B. durch Gruppenzuordnung dient.</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -4581,7 +4592,8 @@
                 </xrxe:menu-item>
                 <xrxe:max-occur>unbounded</xrxe:max-occur>
             </xs:appinfo>
-            <xs:documentation xml:lang="deu">ein Rollennamen, z.B. Adelstitel, Anrede, Epitheton ...</xs:documentation>
+            <xs:documentation xml:lang="deu">ein Rollennamen, z.B. Adelstitel, Anrede, Epitheton
+                ...</xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:sequence>
@@ -4589,7 +4601,8 @@
                     <xs:element ref="foreign"/>
                     <xs:element ref="note"/>
                     <xs:group ref="Originalbefund"/>
-                    <xs:group ref="Sachauszeichnung"/> <!--Erweiterung-->
+                    <xs:group ref="Sachauszeichnung"/>
+                    <!--Erweiterung-->
                 </xs:choice>
             </xs:sequence>
             <xs:attributeGroup ref="lang"/>
@@ -4755,8 +4768,7 @@
                     </xrx:i18n>
                 </xrxe:label>
             </xs:appinfo>
-            <xs:documentation>der Name einer Region, eines Bundeslandes u.ä.
-      </xs:documentation>
+            <xs:documentation>der Name einer Region, eines Bundeslandes u.ä. </xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:attributeGroup ref="type"/>
@@ -5172,7 +5184,9 @@
                             <xrx:default>certainty</xrx:default>
                         </xrx:i18n>
                     </xrxe:label>
-                    <xrxe:relevant context="='persName' or $context='orgName' or $context='geogName' or $context='placeName' or $context='sic' or $context='del' or $context='expan' or $context='damage'"/>
+                    <xrxe:relevant
+                        context="='persName' or $context='orgName' or $context='geogName' or $context='placeName' or $context='sic' or $context='del' or $context='expan' or $context='damage'"
+                    />
                 </xs:appinfo>
                 <xs:documentation xml:lang="deu"> Für Genauigkeitsangaben z.B. bei Datierungen,
                     werden mit Schlüsselwörtern (zu benennen in der encodingDesc) oder kurzen
@@ -5208,7 +5222,9 @@
                             <xrx:default>reg</xrx:default>
                         </xrx:i18n>
                     </xrxe:label>
-                    <xrxe:relevant context="='persName' or $context='orgName' or $context='geogName' or $context='placeName'"/>
+                    <xrxe:relevant
+                        context="='persName' or $context='orgName' or $context='geogName' or $context='placeName'"
+                    />
                 </xs:appinfo>
             </xs:annotation>
         </xs:attribute>
@@ -5224,8 +5240,8 @@
                         </xrx:i18n>
                     </xrxe:label>
                 </xs:appinfo>
-                <xs:documentation xml:lang="deu">Der verantwortliche Bearbeiter für die
-                    Kodierung, den Inhalt der Kodierung oder die vergebenen Attribute.</xs:documentation>
+                <xs:documentation xml:lang="deu">Der verantwortliche Bearbeiter für die Kodierung,
+                    den Inhalt der Kodierung oder die vergebenen Attribute.</xs:documentation>
             </xs:annotation>
         </xs:attribute>
     </xs:attributeGroup>
@@ -5239,7 +5255,9 @@
                             <xrx:default>type</xrx:default>
                         </xrx:i18n>
                     </xrxe:label>
-                    <xrxe:relevant context="='persName' or $context='orgName' or $context='geogName' or $context='placeName' or $context='c'"/>
+                    <xrxe:relevant
+                        context="='persName' or $context='orgName' or $context='geogName' or $context='placeName' or $context='c'"
+                    />
                 </xs:appinfo>
             </xs:annotation>
         </xs:attribute>
@@ -5444,10 +5462,8 @@
                         </xrx:i18n>
                     </xrxe:label>
                 </xs:appinfo>
-                <xs:documentation xml:lang="deu">
-          Eine im gesamten Dokument eindeutige ID, die mit einem Buchtstaben
-          beginnt.
-              </xs:documentation>
+                <xs:documentation xml:lang="deu"> Eine im gesamten Dokument eindeutige ID, die mit
+                    einem Buchtstaben beginnt. </xs:documentation>
             </xs:annotation>
         </xs:attribute>
     </xs:attributeGroup>
@@ -5546,7 +5562,8 @@
                         </xrx:i18n>
                     </xrxe:label>
                 </xs:appinfo>
-                <xs:documentation xml:lang="en">Reference to textual witness identified in charter description.</xs:documentation>
+                <xs:documentation xml:lang="en">Reference to textual witness identified in charter
+                    description.</xs:documentation>
             </xs:annotation>
         </xs:attribute>
     </xs:attributeGroup>
@@ -5561,9 +5578,10 @@
                         </xrx:i18n>
                     </xrxe:label>
                 </xs:appinfo>
-                <xs:documentation xml:lang="deu">Bezeichner der 
-                    Ressource (bevorzugt eine URI), auf der Inhalt eines Textes verweist.</xs:documentation>
-                <xs:documentation xml:lang="en">Reference to a resource (preferable URI) wich is referenced by the content of a text.</xs:documentation>
+                <xs:documentation xml:lang="deu">Bezeichner der Ressource (bevorzugt eine URI), auf
+                    der Inhalt eines Textes verweist.</xs:documentation>
+                <xs:documentation xml:lang="en">Reference to a resource (preferable URI) wich is
+                    referenced by the content of a text.</xs:documentation>
             </xs:annotation>
         </xs:attribute>
     </xs:attributeGroup>

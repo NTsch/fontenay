@@ -3,6 +3,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="qualified" targetNamespace="http://www.monasterium.net/NS/cei" id="cei10"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--Erweiterung-->
     <xs:element name="cei">
         <xs:annotation>
             <xs:documentation xml:lang="deu"> Wurzelelement für alle Dokumente, die den Regeln der
@@ -865,6 +866,7 @@
                                                   </xs:choice>
                                                 </xs:choice>
                                             </xs:sequence>
+                                            <xs:attribute name="type"/> <!--Erweiterung-->
                                             <xs:attributeGroup ref="standard"/>
                                         </xs:complexType>
                                     </xs:element>
@@ -1204,7 +1206,7 @@
             <xs:attributeGroup ref="resp"/>
         </xs:complexType>
     </xs:element>
-    <!--Erweiterung-Anfang-->
+    <!--Erweiterung-->
     <xs:element name="w">
         <xs:annotation>
             <xs:documentation xml:lang="deu">Wort-Element für Transkription.</xs:documentation>
@@ -1219,23 +1221,46 @@
                 <xs:element ref="space"/>
             </xs:choice>
             <xsd:attribute name="id"/>
+            <xsd:attribute name="note"/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="pc" type="xs:string">
+    <xs:element name="pc">
         <xs:annotation>
             <xs:documentation xml:lang="deu">Satzzeichen-Element für
                 Tranksription.</xs:documentation>
         </xs:annotation>
+        <xs:complexType mixed="true">
+            <xsd:attribute name="id"/>
+        </xs:complexType>
     </xs:element>
     <xs:element name="seg">
         <xs:complexType mixed="true">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="expan"/>
                 <xs:element ref="hi"/>
+                <xs:element ref="damage"/>
             </xs:choice>
             <xsd:attribute name="type"/>
             <xsd:attribute name="id"/>
             <xsd:attribute name="part"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addName">
+        <xsd:annotation>
+            <xs:documentation> (additional name) contains an additional name component, such as a
+                nickname, epithet, or alias, or any other descriptive phrase used within a personal
+                name. </xs:documentation>
+        </xsd:annotation>
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="w"/>
+                <xs:element ref="lb"/>
+                <xs:element ref="app"/>
+                <xs:element ref="placeName"/>
+                <xs:element ref="foreign"/>
+                <xs:element ref="orgName"/>
+                <xs:element ref="pc"/>
+            </xs:choice>
         </xs:complexType>
     </xs:element>
     <!--Erweiterung-Ende-->
@@ -1789,10 +1814,10 @@
                 </xs:choice>
             </xs:sequence>
             <xs:attributeGroup ref="standard"/>
-            <!--Erweiterung-Anfang-->
             <xs:attribute name="type" type="xs:string"/>
+            <!--Erweiterung-->
             <xs:attribute name="unit" type="xs:string"/>
-            <!--Erweiterung-Ende-->
+            <!--Erweiterung-->
         </xs:complexType>
     </xs:element>
     <xs:element name="sealDimensions">
@@ -2876,8 +2901,6 @@
                 <xs:element ref="sup"/>
                 <xs:element ref="pict"/>
                 <xs:element ref="app"/>
-                <xs:element ref="w"/> <!--Erweiterung-->
-                <xs:element ref="pc"/> <!--Erweiterung-->
             </xs:choice>
         </xs:sequence>
     </xs:group>
@@ -2895,6 +2918,10 @@
                 <xs:element ref="sic"/>
                 <xs:element ref="handShift"/>
                 <xs:element ref="unclear"/>
+                <xs:element ref="w"/>
+                <!--Erweiterung-->
+                <xs:element ref="pc"/>
+                <!--Erweiterung-->
             </xs:choice>
         </xs:sequence>
     </xs:group>
@@ -2973,8 +3000,10 @@
                     <xs:element ref="hi"/>
                     <xs:element ref="handShift"/>
                     <xs:element ref="pict"/>
-                    <xs:element ref="supplied"/> <!--Erweiterung-->
-                    <xs:element ref="w"/> <!--Erweiterung-->
+                    <xs:element ref="supplied"/>
+                    <!--Erweiterung-->
+                    <xs:element ref="w"/>
+                    <!--Erweiterung-->
                     <xs:group ref="Sachliches"/>
                 </xs:choice>
             </xs:sequence>
@@ -3162,11 +3191,10 @@
                                 <xs:group ref="layout"/>
                                 <xs:group ref="reference"/>
                                 <xs:group ref="textualElements"/>
-                                <!--Erweiterung-->
-                                <xs:element ref="w"/>
-                                <xs:element ref="pc"/>
-                                <xs:element ref="space"/>
-                                <!--Erweiterung-->
+                                <xs:element ref="w"/> <!--Erweiterung-->
+                                <xs:element ref="pc"/> <!--Erweiterung-->
+                                <xs:element ref="space"/> <!--Erweiterung-->
+                                <xs:element ref="damage"/> <!--Erweiterung-->
                             </xs:choice>
                         </xs:sequence>
                         <xs:attributeGroup ref="wit"/>
@@ -3188,8 +3216,12 @@
                     <xs:complexType mixed="true">
                         <xs:sequence>
                             <xs:choice minOccurs="0" maxOccurs="unbounded">
-                                <xs:element ref="w"/> <!--Erweiterung-->
-                                <xs:element ref="foreign"/> <!--Erweiterung-->
+                                <xs:element ref="w"/>
+                                <!--Erweiterung-->
+                                <xs:element ref="add"/>
+                                <xs:element ref="app"/>
+                                <xs:element ref="foreign"/>
+                                <!--Erweiterung-->
                                 <xs:group ref="biblArch"/>
                                 <xs:group ref="layout"/>
                                 <xs:group ref="reference"/>
@@ -3227,7 +3259,8 @@
         <xs:complexType mixed="true">
             <xs:sequence>
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
-                    <xs:element name="ex" type="xs:string"/> <!--Erweiterung-->
+                    <xs:element name="ex" type="xs:string"/>
+                    <!--Erweiterung-->
                     <xs:element ref="c"/>
                     <xs:element ref="lb"/>
                     <xs:element ref="pb"/>
@@ -3410,6 +3443,7 @@
                     <xs:group ref="Referenz"/>
                 </xs:choice>
             </xs:sequence>
+            <xs:attribute name="status"/> <!--Erweiterung-->
             <xs:attributeGroup ref="transcription"/>
             <xs:attributeGroup ref="lang"/>
             <xs:attributeGroup ref="standard"/>
@@ -3444,8 +3478,10 @@
                     <xs:element ref="pb"/>
                     <xs:element ref="damage"/>
                     <xs:element ref="expan"/>
-                    <xsd:element ref="w"/> <!--Erweiterung-->
-                    <xsd:element ref="pc"/> <!--Erweiterung-->
+                    <xsd:element ref="w"/>
+                    <!--Erweiterung-->
+                    <xsd:element ref="pc"/>
+                    <!--Erweiterung-->
                     <xs:group ref="Sachauszeichnung"/>
                     <xs:group ref="Referenz"/>
                 </xs:choice>
@@ -3453,8 +3489,10 @@
             <xs:attributeGroup ref="transcription"/>
             <xs:attributeGroup ref="lang"/>
             <xs:attributeGroup ref="standard"/>
-            <xs:attribute name="source"/><!--Erweiterung-->
-            <xs:attribute name="reason"/><!--Erweiterung-->
+            <xs:attribute name="source"/>
+            <!--Erweiterung-->
+            <xs:attribute name="reason"/>
+            <!--Erweiterung-->
         </xs:complexType>
     </xs:element>
     <xs:element name="pict">
@@ -3594,6 +3632,8 @@
             <xs:documentation xml:lang="eng">Line break in the source. </xs:documentation>
         </xs:annotation>
         <xs:complexType>
+            <xs:attribute name="break"/>
+            <!--Erweiterung-->
             <xs:attributeGroup ref="standard"/>
         </xs:complexType>
     </xs:element>
@@ -4231,6 +4271,14 @@
             <xs:documentation xml:lang="deu">Eine Zahlenangabe </xs:documentation>
         </xs:annotation>
         <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="w"/>
+                    <!--Erweiterung-->
+                    <xs:element ref="pc"/>
+                    <!--Erweiterung-->
+                </xs:choice>
+            </xs:sequence>
             <xs:attributeGroup ref="type"/>
             <xs:attributeGroup ref="value"/>
             <xs:attributeGroup ref="lang"/>
@@ -4269,7 +4317,6 @@
         <xs:choice>
             <xs:element ref="date"/>
             <xs:element ref="dateRange"/>
-            <!--Erweiterung-->
             <xs:element ref="w"/>
             <!--Erweiterung-->
         </xs:choice>
@@ -4374,6 +4421,7 @@
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
                     <xs:element ref="foreign"/>
                     <xs:element ref="num"/>
+                    <xs:element ref="figure"/>
                     <xs:group ref="Originalbefund"/>
                     <xs:element ref="ref"/>
                 </xs:choice>
@@ -4549,6 +4597,8 @@
                         <xs:element ref="forename"/>
                         <xs:element ref="surname"/>
                         <xs:element ref="rolename"/>
+                        <xs:element ref="addName"/>
+                        <!--Erweiterung-->
                     </xs:choice>
                     <xs:element ref="foreign"/>
                     <xs:element ref="note"/>
@@ -4661,7 +4711,8 @@
                     <xs:element ref="foreign"/>
                     <xs:element ref="note"/>
                     <xs:group ref="Originalbefund"/>
-                    <xs:group ref="Sachauszeichnung"/> <!--Erweiterung-->
+                    <xs:group ref="Sachauszeichnung"/>
+                    <!--Erweiterung-->
                 </xs:choice>
             </xs:sequence>
             <xs:attributeGroup ref="lang"/>
@@ -4909,6 +4960,8 @@
                     <xs:element ref="index"/>
                     <xs:element ref="foreign"/>
                     <xs:element ref="note"/>
+                    <xs:element ref="placeName"/> <!--Erweiterung-->
+                    <xs:element ref="persName"/> <!--Erweiterung-->
                     <xs:group ref="Originalbefund"/>
                 </xs:choice>
             </xs:sequence>
@@ -5102,6 +5155,8 @@
                     <xs:group ref="BibliographicInformation"/>
                 </xs:choice>
             </xs:sequence>
+            <xs:attribute name="status"/> <!--Erweiterung-->
+            <xs:attribute name="type"/> <!--Erweiterung-->
             <xs:attributeGroup ref="key"/>
             <xs:attributeGroup ref="lang"/>
             <xs:attributeGroup ref="standard"/>
@@ -5493,7 +5548,8 @@
         <xs:attributeGroup ref="n"/>
         <xs:attributeGroup ref="facs"/>
         <xs:attributeGroup ref="resp"/>
-        <xs:attributeGroup ref="rend"/> <!--Erweiterung-->
+        <xs:attributeGroup ref="rend"/>
+        <!--Erweiterung-->
     </xs:attributeGroup>
     <xs:attributeGroup name="facs">
         <xs:attribute name="facs">

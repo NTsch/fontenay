@@ -25130,12 +25130,12 @@
                      <w xml:id="w_Fontenay_6481">filium</w>
                      <persName>
                         <w xml:id="w_Fontenay_6482">Andree</w>
-                        <placeName>
+                        <!--<placeName> kommentiert Tscherne-->
                            <placeName>
                               <w xml:id="w_Fontenay_6483">montiſ</w>
                               <w xml:id="w_Fontenay_6484">barri</w>
                            </placeName>
-                        </placeName>
+                        <!--</placeName>-->
                         <w xml:id="w_Fontenay_6485">
                            <choice>
                               <expan ana="ori:align-no">d<ex>omi</ex>n</expan>
@@ -34709,11 +34709,11 @@
                         <abbr>aī</abbr>
                      </choice>alia</w>
                   <hi>
-                     <app rend="post corr.">
-                        <lem rend="post corr.">
+                     <!--<app rend="post corr.">
+                        <lem rend="post corr."> Tscherne -->
                            <w xml:id="w_Fontenay_8973">δomus</w>
-                        </lem>
-                     </app>
+                        <!--</lem>
+                     </app>-->
                   </hi>
                   <pc xml:id="pc_Fontenay_1231">,</pc>
                   <w xml:id="w_Fontenay_8974">ea</w>
@@ -63080,11 +63080,11 @@
                      <w xml:id="w_Fontenay_16032">miles</w>
                      <w xml:id="w_Fontenay_16033">δe</w>
                      <placeName>
-                        <app>
-                           <lem wit="A" rend="sic">
+<!--                        <app>
+                           <lem wit="A" rend="sic"> Tscherne -->
                               <w xml:id="w_Fontenay_16034">Eſtorviaco</w>
-                           </lem>
-                        </app>
+                           <!--</lem>
+                        </app>-->
                      </placeName>
                   </persName>
                   <w xml:id="w_Fontenay_16035">δeδit</w>
