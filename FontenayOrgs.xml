@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listOrg>
+    <org xml:id="d6e15665">
+        <!-- DS pour PB : Les Echarlis -->
+        <orgName type="preferred" xml:lang="fre">Les Echarlis</orgName>
+        <orgName ref="#d1e129601">Scarleis</orgName>
+        <orgName ref="#d1e152847">Scharleis</orgName>
+        <orgName ref="#d1e152646">Scharleiis</orgName>
+        <orgName ref="#d1e9835">scarleiarum, Sharleiarum</orgName>
+        <orgName ref="#d1e15293">scarleiis</orgName>
+        <orgName ref="#d1e16944">scharleiisSchalleiisScalleus</orgName>
+        <orgName ref="#d1e19929">scharleis</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Villefranche</district>
+        <district type="canton">Charny</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames"/>
+        <idno type="Dico-Topo"/>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_des_%C3%89charlis"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17926">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye d'Auberive</orgName>
+        <orgName ref="#d1e152446">Alba Ripa</orgName>
+        <desc>abbaye d'hommes, O.Cist.</desc>
+        <district type="commune">Auberive</district>
+        <district type="canton">Villegusien-le-Lac</district>
+        <district type="département">Haute-Marne</district>
+        <idno type="GeoNames">11001766</idno>
+        <idno type="Dico-Topo">DT52-00081</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_d%27Auberive"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17928">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Hautecombe</orgName>
+        <orgName ref="#d1e159506">Alte Cumbe</orgName>
+        <orgName ref="#d1e131060">Altte Cumbe</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Saint-Pierre-de-Curtille</district>
+        <district type="canton">Bugey savoyard</district>
+        <district type="département">Savoie</district>
+        <idno type="GeoNames">11154385</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_d%27Hautecombe"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17932">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Évêché d'Auxerre</orgName>
+        <orgName ref="#d1e132302 #d1e132313">Autisiodorensis</orgName>
+        <orgName ref="#d1e131752 #d1e132115">Autissiodorensis</orgName>
+        <orgName ref="#d1e115450">Capitulum Altisiodorense</orgName>
+        <desc>anciene évêché</desc>
+        <district type="commune">Auxerre</district>
+        <district type="canton">Autxerre</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11978869</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Dioc%C3%A8se_d%27Auxerre"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17940">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Beaulieu</orgName>
+        <orgName ref="#d1e157749">Belli Loci</orgName>
+        <desc>abbaye d'hommes, O.Cist.</desc>
+        <district type="commune">Haute-Amance</district>
+        <district type="canton">Chalindrey</district>
+        <district type="département">Haute-Marne</district>
+        <idno type="GeoNames">11593070</idno>
+        <idno type="Dico-Topo">DT52-00177</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Beaulieu_(Haute-Marne)"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17942">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de la Bénisson-Dieu</orgName>
+        <orgName ref="#d1e131267">Benedicionis Dei</orgName>
+        <desc>abbaye ancienne, O.Cist.</desc>
+        <district type="commune">La Bénissons-Dieu</district>
+        <district type="canton">Charlieu</district>
+        <district type="département">Loire</district>
+        <idno type="GeoNames">11002872</idno>
+        <idno type="Dico-Topo">DT42-00741</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_la_B%C3%A9nisson-Dieu"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17944">
+        <orgName ref="#d1e141777 #d1e141834">Burra</orgName>
+    </org>
+    <org xml:id="d6e17951">
+        <!-- orgName? DS pour PB : oui, Ordre des Chartreux -->
+        <orgName ref="#d1e135780">Cartusiensis</orgName>
+    </org>
+    <org xml:id="d6e17953">
+        <orgName ref="#d1e59154 #d1e129059 #d1e100292 #d1e101704">Castellionis</orgName>
+    </org>
+    <org xml:id="d6e17961">
+        <!-- orgName? DS pour PB : oui, ordre de Cîteaux -->
+        <orgName ref="#d1e165569">Cisterciensis</orgName>
+        <orgName ref="#d1e156099 #d1e156092 #d1e156577 #d1e163927 #d1e169733 #d1e169739"
+            >Cisterciensis ordinis</orgName>
+        <orgName ref="#d1e155998 #d1e156401">Cisterciensium fratrum</orgName>
+        <orgName ref="#d1e144685">ordine Cisterciensi</orgName>
+    </org>
+    <org xml:id="d6e17980">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Cîteaux</orgName>
+        <orgName ref="#d1e26480 #d1e26825 #d1e134662 #d1e134827 #d1e168163">Cistercii</orgName>
+        <orgName ref="#d1e26985">capitulo Cistercii</orgName>
+        <!-- DS pour PB : ailleurs vous avez précisé Cistercien, ou O.C. La bonne formulation est "O.Cist.". Pouvez-vous harmoniser selon cette formulation ?-->
+        <desc>abbaye O.Cist.</desc>
+        <district type="commune">Saint-Nicolas-lès-Cîteaux</district>
+        <district type="canton">Nuits-Saint-Georges</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">3024876</idno>
+        <idno type="Dico-Topo">DT21-01921</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_C%C3%AEteaux"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e17990">
+        <orgName type="preferred" xml:lang="fre">Abbaye de Clairvaux</orgName>
+        <orgName ref="#d1e151861">Clara Valle</orgName>
+        <orgName ref="#d1e14989">ClaraValle</orgName>
+        <orgName ref="#d1e142828 #d1e142861 #d1e142966 #d1e143060">Claraevallis</orgName>
+        <orgName ref="#d1e154720 #d1e154507 #d1e154541 #d1e154798">Clare Vallis</orgName>
+        <orgName ref="#d1e142640">Clare VallisClarevall.Clarevallensis</orgName>
+        <orgName ref="#d1e151042 #d1e156095 #d1e156580 #d1e2448">Clarevallensis</orgName>
+        <orgName ref="#d1e149965 #d1e168185">Clarevallis</orgName>
+        <orgName ref="#d1e143101">Claris Vallibus</orgName>
+        <orgName ref="#d1e145917">Claram Vallem</orgName>
+        <desc>abbaye O.Cist.</desc>
+        <district type="commune">Ville-sous-la-Ferté</district>
+        <district type="canton">Bar-sur-Aube</district>
+        <district type="département">Aube</district>
+        <idno type="GeoNames">11000506</idno>
+        <idno type="Dico-Topo">DT10-00880</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Clairvaux"/>
+        </bibl>
+
+    </org>
+    <org xml:id="d6e18028">
+        <!-- identifié par Petr Bartik, placeName ou orgName? -->
+        <orgName type="preferred" xml:lang="fre">Évêché d'Autun</orgName>
+        <orgName ref="#d1e131273">Eduensi</orgName>
+        <orgName ref="#d1e130808 #d1e131080 #d1e164595">Eduensis</orgName>
+        <orgName ref="#d1e144689">Eduensium canonicorum</orgName>
+        <!-- DS pour PB : attention, vous écrivez régulièrement "comunne" alors qu'il faut écrire "commune" -->
+        <district type="commune">Autun</district>
+        <district type="canton">Autun</district>
+        <district type="département">Sâone-et-Loire</district>
+    </org>
+    <org xml:id="d6e18038">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de La Ferté</orgName>
+        <orgName ref="#d1e26742 #d1e134667 #d1e134706 #d1e134813 #d1e141011 #d1e65572"
+            >Firmitate</orgName>
+        <orgName ref="#d1e168170">Firmitatis</orgName>
+        <desc>abbaye, ordre de Cîteaux</desc>
+        <district type="commune">Saint-Ambreuil</district>
+        <district type="canton">Tournus</district>
+        <district type="département">Sâone-et-Loire</district>
+        <idno type="GeoNames">11001406</idno>
+        <idno type="Dico-Topo">DT71-07772</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_La_Fert%C3%A9"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e18051">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Joseph de Clairval</orgName>
+
+        <orgName ref="#d1e131121 #d1e131214">Flavigniacensis</orgName>
+        <orgName ref="#d1e130180">Flavin[iacensis]</orgName>
+        <orgName ref="#d1e6749">Flaviniacensem, Flaviñ.</orgName>
+        <orgName ref="#d1e2052 #d1e44094">Flaviniacenses</orgName>
+        <orgName ref="#d1e1500 #d1e1873 #d1e2271">Flaviniacensi</orgName>
+        <orgName ref="#d1e154982 #d1e1983 #d1e44201">Flaviniacensibus</orgName>
+        <orgName
+            ref="#d1e1387 #d1e1654 #d1e2175 #d1e130239 #d1e130593 #d1e147142 #d1e151596 #d1e151719 #d1e164436 #d1e43618 #d1e89910"
+            >Flaviniacensis</orgName>
+        <orgName ref="#d1e8218 #d1e8705">FlaviniacensisFlaviñ</orgName>
+        <orgName ref="#d1e6859">Flaviniacensis, Flaviñ.</orgName>
+        <orgName ref="#d1e1332">Flaviniacensis ecclesie</orgName>
+        <orgName ref="#d1e2628">Flaviniacensis</orgName>
+        <orgName
+            ref="#d1e135009 #d1e157490 #d1e157708 #d1e159503 #d1e162032 #d1e165424 #d1e49452 #d1e51829 #d1e60678 #d1e100271 #d1e101683"
+            >Flaviniaci</orgName>
+        <orgName ref="#d1e131055">Flavinniasensis</orgName>
+        <desc>abbaye, O.S.B.</desc>
+        <district type="commune">Flavigny-sur-Ozerain</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962645</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Joseph_de_Clairval"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e18116">
+        <orgName type="preferred" xml:lang="fre">Abbaye de Fontenay</orgName>
+        <orgName ref="#d1e154985">FontanentensiumFontanectensium</orgName>
+        <orgName ref="#d1e14460">Fontanetenses</orgName>
+        <orgName ref="#d1e13905 #d1e14406">Fontanetensis</orgName>
+        <orgName ref="#d1e13380 #d1e15269 #d1e165572">Fontaneti</orgName>
+        <orgName ref="#d1e165567">Fontaneti, ordinis Cisterciensis</orgName>
+        <orgName ref="#d1e13089">Fontanetięcclesię</orgName>
+        <orgName
+            ref="#d1e14967 #d1e145378 #d1e145623 #d1e155969 #d1e156379 #d1e157152 #d1e157174 #d1e162586 #d1e163981 #d1e164037 #d1e169730 #d1e169736"
+            >Fontaneto</orgName>
+        <orgName ref="#d1e137723">Fonten(etensis)</orgName>
+        <orgName ref="#d1e135613 #d1e137389 #d1e139047 #d1e139385 #d1e139434 #d1e140224"
+            >Fonten(eti)</orgName>
+        <orgName ref="#d1e137742">Fonten(eto)</orgName>
+        <orgName ref="#d1e130192">Fonten[eti]</orgName>
+        <orgName ref="#d1e135783">Fontene(tensium)</orgName>
+        <orgName ref="#d1e134265">Fonteneio</orgName>
+        <orgName ref="#d1e132765">Fontenentenses</orgName>
+        <orgName ref="#d1e139755">Fontenenti</orgName>
+        <orgName ref="#d1e163396">Fontenet</orgName>
+        <orgName ref="#d1e153329">FontenetensemFonteneten.Fonteneti</orgName>
+        <orgName ref="#d1e6769">FontenetensemFont.</orgName>
+        <orgName ref="#d1e10399">Fontenetensemecclesiam</orgName>
+        <orgName
+            ref="#d1e1939 #d1e5800 #d1e16161 #d1e21340 #d1e31101 #d1e129024 #d1e129273 #d1e129283 #d1e129348 #d1e130035 #d1e130863 #d1e133379 #d1e133694 #d1e136223 #d1e137362 #d1e140005 #d1e140014 #d1e140025 #d1e141576 #d1e144777 #d1e144808 #d1e154187 #d1e154382 #d1e156270 #d1e156284 #d1e158011 #d1e158033 #d1e158338 #d1e159528 #d1e161562 #d1e162748 #d1e162760 #d1e163004 #d1e163029 #d1e168335 #d1e170098 #d1e121836 #d1e122146 #d1e47424 #d1e63788 #d1e43686 #d1e44134 #d1e48895 #d1e61194 #d1e63265 #d1e64916 #d1e66894 #d1e67216 #d1e72494 #d1e72795 #d1e75397 #d1e75457 #d1e75565 #d1e75665 #d1e78095 #d1e92330 #d1e93789 #d1e95272 #d1e97461 #d1e69201 #d1e69934 #d1e74160 #d1e74700 #d1e89450 #d1e90781 #d1e91126 #d1e91310 #d1e123273 #d1e124900"
+            >Fontenetenses</orgName>
+        <orgName ref="#d1e26576">Fontenetenses, Fontenenenses</orgName>
+        <orgName
+            ref="#d1e1405 #d1e2191 #d1e3198 #d1e32381 #d1e144704 #d1e151971 #d1e164950 #d1e11302 #d1e17732 #d1e32060 #d1e36660 #d1e20580 #d1e43129 #d1e37081 #d1e37407 #d1e37753 #d1e45991 #d1e46701"
+            >Fontenetensi</orgName>
+        <orgName ref="#d1e132762">Fontenetensi ecclesie</orgName>
+        <orgName
+            ref="#d1e15706 #d1e129232 #d1e133349 #d1e133361 #d1e135028 #d1e135038 #d1e136236 #d1e136274 #d1e137058 #d1e139603 #d1e153535 #d1e155715 #d1e155732 #d1e156296 #d1e158158 #d1e159217 #d1e159535 #d1e169340 #d1e2041 #d1e26282 #d1e31429 #d1e122628 #d1e63354 #d1e36746 #d1e33330 #d1e32983 #d1e35080 #d1e48872 #d1e49161 #d1e69247 #d1e69975 #d1e79632 #d1e84400 #d1e98422"
+            >Fontenetensibus</orgName>
+        <orgName
+            ref="#d1e1355 #d1e2255 #d1e2421 #d1e5065 #d1e144682 #d1e169302 #d1e34059 #d1e89933 #d1e90186 #d1e92757 #d1e36196"
+            >Fontenetensis</orgName>
+        <orgName ref="#d1e6879">Fontenetensis, Font.</orgName>
+        <orgName ref="#d1e16909">Fontenetensis, Font., Fonteneti</orgName>
+        <orgName ref="#d1e153314">Fontenetensis, Fonteneten., Fonteneti</orgName>
+        <orgName ref="#d1e16640">Fontenetensi, Fonteneti</orgName>
+        <orgName
+            ref="#d1e131174 #d1e132780 #d1e133367 #d1e133878 #d1e136243 #d1e152402 #d1e154579 #d1e59736"
+            >Fontenetensium</orgName>
+        <orgName ref="#d1e152560">Fontenetensium, Fonteneten.Fontenetensi</orgName>
+        <orgName
+            ref="#d1e199 #d1e3571 #d1e3976 #d1e19524 #d1e29414 #d1e30063 #d1e76868 #d1e87022 #d1e87707 #d1e105729 #d1e116418 #d1e118274 #d1e118641 #d1e119970 #d1e126520 #d1e127628 #d1e128099 #d1e128270 #d1e128291 #d1e128480 #d1e128636 #d1e128671 #d1e128854 #d1e128876 #d1e129005 #d1e129029 #d1e129596 #d1e129850 #d1e130391 #d1e130605 #d1e130834 #d1e130849 #d1e130880 #d1e130897 #d1e131067 #d1e131136 #d1e131151 #d1e131964 #d1e132184 #d1e132827 #d1e132959 #d1e133080 #d1e133315 #d1e133417 #d1e133679 #d1e133735 #d1e134536 #d1e134672 #d1e134818 #d1e134839 #d1e135035 #d1e135169 #d1e135343 #d1e135401 #d1e135456 #d1e135585 #d1e135755 #d1e135790 #d1e135850 #d1e135891 #d1e136207 #d1e136427 #d1e136466 #d1e136647 #d1e136850 #d1e137049 #d1e137154 #d1e137192 #d1e137222 #d1e137340 #d1e137926 #d1e138019 #d1e138061 #d1e138221 #d1e138415 #d1e138603 #d1e138920 #d1e138936 #d1e139022 #d1e139798 #d1e140040 #d1e140212 #d1e140575 #d1e140924 #d1e140983 #d1e141239 #d1e141272 #d1e141344 #d1e141352 #d1e141524 #d1e141753 #d1e141760 #d1e141767 #d1e141820 #d1e141997 #d1e142244 #d1e142359 #d1e142893 #d1e142907 #d1e143012 #d1e143055 #d1e144111 #d1e144352 #d1e144478 #d1e144611 #d1e144718 #d1e144837 #d1e144872 #d1e145765 #d1e146402 #d1e146434 #d1e146476 #d1e146566 #d1e146603 #d1e146717 #d1e146790 #d1e146998 #d1e147208 #d1e147260 #d1e147291 #d1e147336 #d1e147412 #d1e147447 #d1e147475 #d1e147564 #d1e147650 #d1e147712 #d1e147913 #d1e148004 #d1e148052 #d1e148254 #d1e148351 #d1e148459 #d1e148540 #d1e148582 #d1e148640 #d1e148718 #d1e148771 #d1e148853 #d1e148869 #d1e148998 #d1e149055 #d1e149126 #d1e149226 #d1e149248 #d1e149299 #d1e149389 #d1e149445 #d1e149534 #d1e149591 #d1e149612 #d1e149702 #d1e149859 #d1e149954 #d1e150054 #d1e150149 #d1e150212 #d1e150382 #d1e150464 #d1e150546 #d1e150689 #d1e150782 #d1e151228 #d1e151321 #d1e151391 #d1e151400 #d1e151419 #d1e151525 #d1e151609 #d1e151725 #d1e152189 #d1e152422 #d1e152634 #d1e152654 #d1e152657 #d1e152813 #d1e152983 #d1e153074 #d1e153159 #d1e153192 #d1e153661 #d1e153700 #d1e153743 #d1e153769 #d1e153909 #d1e153986 #d1e154304 #d1e154455 #d1e154524 #d1e154561 #d1e154630 #d1e154789 #d1e155095 #d1e155109 #d1e155112 #d1e155158 #d1e155191 #d1e155235 #d1e155693 #d1e155708 #d1e155726 #d1e155792 #d1e156293 #d1e156305 #d1e156816 #d1e156844 #d1e156915 #d1e157042 #d1e157273 #d1e157598 #d1e157611 #d1e157736 #d1e157983 #d1e157989 #d1e157992 #d1e158002 #d1e158008 #d1e158027 #d1e158047 #d1e158213 #d1e158332 #d1e158335 #d1e158377 #d1e158451 #d1e158601 #d1e158768 #d1e158792 #d1e158896 #d1e158905 #d1e158908 #d1e158917 #d1e159046 #d1e159191 #d1e159343 #d1e159564 #d1e159663 #d1e159827 #d1e159941 #d1e159953 #d1e159970 #d1e160064 #d1e160389 #d1e160565 #d1e160911 #d1e161040 #d1e161219 #d1e161251 #d1e161375 #d1e161387 #d1e161543 #d1e161620 #d1e161723 #d1e161726 #d1e161731 #d1e162005 #d1e162050 #d1e162310 #d1e162318 #d1e162336 #d1e162432 #d1e162459 #d1e162485 #d1e162689 #d1e162804 #d1e162903 #d1e163001 #d1e163160 #d1e163200 #d1e163753 #d1e163933 #d1e164460 #d1e164627 #d1e164828 #d1e165129 #d1e165266 #d1e165452 #d1e165460 #d1e165474 #d1e165477 #d1e165635 #d1e165830 #d1e165942 #d1e165971 #d1e166039 #d1e166062 #d1e166186 #d1e166410 #d1e166550 #d1e166676 #d1e166694 #d1e166881 #d1e166989 #d1e167142 #d1e167256 #d1e167391 #d1e167411 #d1e167453 #d1e167460 #d1e167542 #d1e167699 #d1e167876 #d1e167892 #d1e168072 #d1e168303 #d1e168339 #d1e168364 #d1e168459 #d1e168694 #d1e168799 #d1e168811 #d1e168924 #d1e169168 #d1e169454 #d1e169566 #d1e169841 #d1e170010 #d1e170073 #d1e170214 #d1e170373 #d1e76977 #d1e97076 #d1e116756 #d1e120942 #d1e126838 #d1e126918 #d1e34552 #d1e34916 #d1e38374 #d1e38532 #d1e43044 #d1e47724 #d1e48484 #d1e49103 #d1e50822 #d1e51228 #d1e51360 #d1e51485 #d1e51645 #d1e51872 #d1e59594 #d1e64866 #d1e65531 #d1e66205 #d1e66777 #d1e68894 #d1e69024 #d1e69646 #d1e69766 #d1e70392 #d1e71309 #d1e72428 #d1e73361 #d1e74525 #d1e75015 #d1e78880 #d1e86468 #d1e88074 #d1e88697 #d1e98385 #d1e102242 #d1e102318 #d1e106345 #d1e108722 #d1e110147 #d1e111379 #d1e114142 #d1e119148 #d1e119247 #d1e127496 #d1e47372 #d1e68188 #d1e68657 #d1e69432 #d1e70146 #d1e74326 #d1e74386 #d1e78486 #d1e79279 #d1e80359 #d1e82999 #d1e83941 #d1e85329 #d1e93721 #d1e94772 #d1e94944 #d1e95364 #d1e95901 #d1e96656 #d1e99479 #d1e99935 #d1e99996 #d1e100898 #d1e101352 #d1e111048 #d1e112001 #d1e112256 #d1e113430 #d1e50906 #d1e67974 #d1e98667 #d1e103495 #d1e103856"
+            >Fonteneti</orgName>
+        <orgName ref="#d1e142611">Fonteneti, Fontaneti</orgName>
+        <orgName ref="#d1e161844">Fonteneti, Fontenetensi</orgName>
+        <orgName ref="#d1e157965">Fonteneti, Fontenetensis</orgName>
+        <orgName ref="#d1e160712">Fonteneti, Fonteñ, Fontenetensi</orgName>
+        <orgName
+            ref="#d1e18898 #d1e31371 #d1e112671 #d1e128809 #d1e129243 #d1e131200 #d1e131493 #d1e132179 #d1e132308 #d1e133865 #d1e134087 #d1e134678 #d1e134710 #d1e136623 #d1e136891 #d1e139184 #d1e139214 #d1e139355 #d1e139562 #d1e140391 #d1e140584 #d1e143147 #d1e143281 #d1e143340 #d1e143469 #d1e143575 #d1e143629 #d1e143737 #d1e143789 #d1e143882 #d1e143958 #d1e144015 #d1e145062 #d1e145898 #d1e146232 #d1e146314 #d1e146362 #d1e146418 #d1e146464 #d1e146532 #d1e146655 #d1e146734 #d1e146816 #d1e147057 #d1e147128 #d1e152452 #d1e152720 #d1e152841 #d1e155850 #d1e157027 #d1e157400 #d1e157714 #d1e159516 #d1e160160 #d1e160176 #d1e160347 #d1e162196 #d1e164094 #d1e165058 #d1e165360 #d1e165654 #d1e165756 #d1e167746 #d1e168191 #d1e168793 #d1e168870 #d1e35023 #d1e45025 #d1e105050 #d1e107752 #d1e115032 #d1e115584"
+            >Fonteneto</orgName>
+        <orgName ref="#d1e168017">Fonteneto, Fonteñ.</orgName>
+        <orgName ref="#d1e154481 #d1e154658 #d1e160061">Fontenetum</orgName>
+        <orgName ref="#d1e131772">Fontenoio</orgName>
+        <orgName ref="#d1e135050">Fontentensis</orgName>
+        <orgName ref="#d1e138673">Fontenti, Fonteñ, Fonteneteñ, Fontenetenses</orgName>
+        <orgName ref="#d1e136048 #d1e163340">Fontineti</orgName>
+        <orgName ref="#d1e131089">Funteneto</orgName>
+        <orgName ref="#d1e60428">fontenenses</orgName>
+        <orgName ref="#d1e125458">fontenensibus</orgName>
+        <orgName ref="#d1e47103">fontenetensem</orgName>
+        <orgName ref="#d1e161701">fratres Fonteneti</orgName>
+        <orgName ref="#d1e53709 #d1e55548">ecclesiam fonteneti</orgName>
+        <orgName ref="#d1e52149 #d1e54023 #d1e18617 #d1e21579 #d1e23888">ecclesie
+            fonteneti</orgName>
+        <orgName ref="#d1e11121">ecclesie Fontenetensi, Fontenetensi</orgName>
+        <orgName ref="#d1e12200">ecclesie Fontineti</orgName>
+        <orgName ref="#d1e18059">ecclesie Fonteneti</orgName>
+        <orgName ref="#d1e17236">ecclesię Fontenetensi</orgName>
+        <orgName ref="#d1e16475">ecclesię Fontenetensi Fonteneti</orgName>
+        <orgName ref="#d1e30798">ecclesię Fonteneti</orgName>
+        <orgName ref="#d1e131919">ecclesie sancte Marie Fonteneti</orgName>
+        <orgName ref="#d1e164213">sanctae Mariae de Fontaneto, Fonteneto</orgName>
+        <orgName ref="#d1e163699">sancte Marie Fonteneti</orgName>
+        <orgName ref="#d1e166299 #d1e162171">sancte Marie de Fonteneto</orgName>
+        <orgName ref="#d1e137547">sancte Marie de Fontenois</orgName>
+        <orgName ref="#d1e166859">beate Marie de Fonteneto</orgName>
+        <orgName ref="#d1e8796">ęcclesię Fonteneti</orgName>
+        <orgName ref="#d1e3361">ęcclesiam Fonteneti</orgName>
+        <orgName ref="#d1e4222">loci Fontenetensis</orgName>
+        <orgName ref="#d1e150565">monachi Fonteneti</orgName>
+        <orgName ref="#d1e28321">sancte Marie de Fonteneto</orgName>
+        <orgName ref="#d1e24885 #d1e40317">abbatie Fonteneti</orgName>
+        <desc>Ancienne abbaye d’hommes, O.Cist.</desc>
+        <district type="commune">Marmagne</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">7874015</idno>
+        <idno type="Dico-Topo">DT21-02833</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Fontenay"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19241">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Jully-les-Nonnains</orgName>
+        <orgName ref="#d1e14013 #d1e14216 #d1e14481 #d1e138980">Juliacenses</orgName>
+        <orgName ref="#d1e14426">Juliacensis</orgName>
+        <orgName ref="#d1e15120 #d1e15176 #d1e138925 #d1e138939 #d1e139039 #d1e56332"
+            >Juliaci</orgName>
+        <orgName ref="#d1e15036 #d1e105061 #d1e155456 #d1e57153 #d1e58582">Juliaco</orgName>
+        <orgName ref="#d1e155328">sancte Marie Juliaci</orgName>
+        <orgName ref="#d1e13150 #d1e13454">ęcclesię Juliaci</orgName>
+        <desc>monastère de femmes, O.S.B.</desc>
+        <district type="commune">Jully</district>
+        <district type="canton">Tonnerrois</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11978870</idno>
+        <idno type="Dico-Topo">DT89-02915</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Jully-les-Nonnains"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19268">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Évêché de Langres</orgName>
+        <orgName ref="#d1e15354 #d1e15507">Lingonensis</orgName>
+        <orgName ref="#d1e151324">Linguonensis ecclesie</orgName>
+        <district type="canton">Langres</district>
+        <district type="département">Haute-Marne</district>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Dioc%C3%A8se_de_Langres"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19274">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Longuay</orgName>
+        <orgName ref="#d1e159540 #d1e131204 #d1e159490 #d1e159555">Longi Vadi</orgName>
+        <orgName ref="#d1e131111">Longi Vuadi</orgName>
+        <orgName ref="#d1e134833">Longivadi</orgName>
+        <desc>ancienne abbaye d'hommes, O.S.A., puis O.Cist.</desc>
+        <district type="commune">Arc-en-Barrois</district>
+        <district type="canton">Châteauvillain</district>
+        <district type="département">Haute-Marne</district>
+        <idno type="GeoNames">11071523</idno>
+        <idno type="Dico-Topo">DT52-02037</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Longuay"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19289">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Notre-Dame de Molesme</orgName>
+        <orgName ref="#d1e141920 #d1e15131 #d1e13871">Molismensis</orgName>
+        <orgName ref="#d1e128495">Molismi</orgName>
+        <orgName ref="#d1e14384">capituli Molismensis</orgName>
+        <desc>ancienne abbaye</desc>
+        <district type="commune">Molesme</district>
+        <district type="canton">Châtillon-sur-Seine</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962646</idno>
+        <idno type="Dico-Topo">DT21-04421</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_de_Molesme"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19306">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Morimond</orgName>
+        <orgName ref="#d1e26865">Morimundi</orgName>
+        <desc>abbaye d'hommes, O.Cist.</desc>
+        <district type="commune">Parnoy-en-Bassigny</district>
+        <district type="canton">Bourbonne-les-Bains</district>
+        <district type="département">Haute-Marne</district>
+        <idno type="GeoNames">11054865</idno>
+        <idno type="Dico-Topo">DT52-02437</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Morimond"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19308">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye d'Oigny</orgName>
+        <orgName ref="#d1e5593">Ongiacenses</orgName>
+        <orgName ref="#d1e6149 #d1e6210">Ongiacenses Ungiacenses</orgName>
+        <orgName ref="#d1e5889">Ongiacensibus Ungiacensibus</orgName>
+        <orgName ref="#d1e5079">Ongiacensis ecclesię</orgName>
+        <orgName ref="#d1e144357">Ongiaci</orgName>
+        <orgName ref="#d1e145632">Hungiacenses</orgName>
+        <orgName ref="#d1e131177">Ungiacencses</orgName>
+        <orgName ref="#d1e159522 #d1e91381 #d1e89464 #d1e91201">Ungiacenses</orgName>
+        <orgName ref="#d1e159532 #d1e90828">Ungiacensibus</orgName>
+        <orgName ref="#d1e131162 #d1e147147 #d1e151047 #d1e90382">Ungiacensis</orgName>
+        <orgName
+            ref="#d1e131071 #d1e144378 #d1e146611 #d1e146918 #d1e147136 #d1e147377 #d1e151094 #d1e159545 #d1e159550"
+            >Ungiaci</orgName>
+        <orgName ref="#d1e159519">Ungiaco</orgName>
+        <orgName ref="#d1e131146">Ungniacenses</orgName>
+        <orgName ref="#d1e131084">Ungniacensis</orgName>
+        <orgName ref="#d1e131132">Unniacences</orgName>
+
+        <!-- DS pour PB : il faut rapatrier ici et corriger les données pour les occurrences d'Oigny qui renvoie à l'abbaye -->
+        <desc>ancienne abbaye-d’hommes, O.S.A.</desc>
+        <district type="commune">Oigny</district>
+        <district type="canton">Châtillon-sur-Seine</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962647</idno>
+        <idno type="Dico-Topo">DT21-05106</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_d%27Oigny"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19320">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Pontigny</orgName>
+        <orgName ref="#d1e168177">Pontiaci</orgName>
+        <orgName ref="#d1e141750">Pontiniacensis</orgName>
+        <orgName ref="#d1e141829">Poten.</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Pontigny</district>
+        <district type="canton">Chablis</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11048958</idno>
+        <idno type="Dico-Topo">DT89-04174</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Pontigny"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19326">
+        <orgName ref="#d1e153490">Pratea</orgName>
+    </org>
+    <org xml:id="d6e19329">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Pierre-et-Saint-Paul de
+            Pothières</orgName>
+        <orgName ref="#d1e110689 #d1e161237">Pulteriis</orgName>
+        <desc>abbaye d’hommes, de l’ordre de saint Benoît</desc>
+        <district type="commune">Pothières</district>
+        <district type="canton">Châtillon-sur-Seine</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962649</idno>
+        <idno type="Dico-Topo">DT21-05522</idno>
+        <bibl>
+            <ptr
+                target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre-et-Saint-Paul_de_Pothi%C3%A8res"
+            />
+        </bibl>
+    </org>
+    <org xml:id="d6e19333">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye du Puits-d'Orbe</orgName>
+        <orgName ref="#d1e168332 #d1e168294 #d1e168300 #d1e168314 #d1e168342">Putei Orbi</orgName>
+        <orgName ref="#d1e8976">Putei Urbis</orgName>
+        <desc>abbaye de femmes, de l’ordre de saint Benoît, transférée à Châtillon-sur-Seine, en
+            1619</desc>
+        <district type="commune">Asnières-en-Montagne</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11978871</idno>
+        <idno type="Dico-Topo">DT21-05669</idno>
+        <bibl>
+            <ptr
+                target="https://fr.wikipedia.org/wiki/Couvent_des_b%C3%A9n%C3%A9dictines_de_Ch%C3%A2tillon-sur-Seine"
+            />
+        </bibl>
+    </org>
+    <org xml:id="d6e19345">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Caillier</orgName>
+        <orgName ref="#d1e140204">Quailler</orgName>
+        <desc>ancien hôpital, dans la fôret</desc>
+        <district type="commune">Arrans</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="Dico-Topo">DT21-01132</idno>
+    </org>
+    <org xml:id="d6e19347">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Quincy</orgName>
+        <orgName
+            ref="#d1e116790 #d1e141756 #d1e141763 #d1e141772 #d1e141788 #d1e141801 #d1e141813 #d1e93099 #d1e93147"
+            >Quinciaci</orgName>
+        <orgName ref="#d1e133908">Quinceio</orgName>
+        <orgName ref="#d1e26559 #d1e27132">Quinciacenses</orgName>
+        <orgName ref="#d1e94380">quinciaco</orgName>
+        <desc>abbaye d'hommes, O.Cist.</desc>
+        <district type="commune">Tanlay</district>
+        <district type="canton">Tonnerrois</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11104784</idno>
+        <idno type="Dico-Topo">DT89-04330</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Quincy"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19368">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Reigny</orgName>
+        <orgName ref="#d1e1574">Regniacensi</orgName>
+        <orgName ref="#d1e146711">Regniacensis</orgName>
+        <orgName ref="#d1e10253 #d1e11824">Regniaci</orgName>
+        <orgName ref="#d1e66504">regniaco</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Vermenton</district>
+        <district type="canton">Joux-la-Ville</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11108045</idno>
+        <idno type="Dico-Topo">DT89-04399</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Reigny"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19377">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Notre-Dame de Rougemont</orgName>
+        <orgName ref="#d1e151980 #d1e168357">Rubei Montis</orgName>
+        <orgName ref="#d1e151975">Rubei Montis ecclesiam</orgName>
+        <desc>abbaye de femmes, l’ordre de saint Benoît</desc>
+        <district type="commune">Rougemont</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11978872</idno>
+        <idno type="Dico-Topo">DT21-05984</idno>
+    </org>
+    <org xml:id="d6e19383">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Sainte-Marguerite</orgName>
+        <orgName ref="#d1e151468 #d1e145813 #d1e137558">Sancte Margarite</orgName>
+        <orgName ref="#d1e131256">Sancte Marguarite Margarite</orgName>
+        <orgName ref="#d1e3791 #d1e4526">Sanctę Margaritę</orgName>
+        <desc>abbaye d’hommes, O.S.A.</desc>
+        <district type="commune">Bouilland</district>
+        <district type="canton">Ladoix-Serrigny</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962651</idno>
+        <idno type="Dico-Topo">DT21-06204</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Sainte-Marguerite_de_Bouilland"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19389">
+        <orgName ref="#d1e161086">Sancte Marie de Sinemuro</orgName>
+        <orgName ref="#d1e60734">sinemuro</orgName>
+    </org>
+    <org xml:id="d6e19391">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Michel de Tonnerre</orgName>
+        <orgName ref="#d1e136412">Sancti Michaelis</orgName>
+        <desc>abbaye, O.Ben.</desc>
+        <district type="commune">Tonnerre</district>
+        <district type="canton">Tonnerrois</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">6489304</idno>
+        <idno type="Dico-Topo">DT89-04761</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Michel_de_Tonnerre"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19395">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Julien d'Auxerre</orgName>
+        <orgName ref="#d1e134399">Sancti Juliani Altissiodorensis</orgName>
+        <orgName ref="#d1e134407">Sancto Juliano</orgName>
+        <desc>ancienne abbaye, O.Ben., lieu détruit</desc>
+        <district type="commune">Auxerre</district>
+        <district type="canton">Auxerre</district>
+        <district type="département">Yonne</district>
+        <idno type="GeoNames">11978873</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Julien_d%27Auxerre"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19400">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Martin d'Autun</orgName>
+        <orgName ref="#d1e153064 #d1e155868 #d1e153657">Sancti Martini Eduensis</orgName>
+        <orgName ref="#d1e153692">Sancti Martini Eduensis, Æduensis</orgName>
+        <orgName ref="#d1e134410">Sancto Martino</orgName>
+        <orgName ref="#d1e12106">Sancti Martini</orgName>
+        <orgName ref="#d1e153071">beati Martini</orgName>
+        <orgName ref="#d1e155892">ecclesiae Sancti Martini</orgName>
+        <orgName ref="#d1e155853">ecclesiam sancti Martini Æduensis</orgName>
+        <orgName ref="#d1e155902">monachorum Eduensium</orgName>
+        <orgName ref="#d1e153786">monachorum monacorum Eduensium Æduensium</orgName>
+        <orgName ref="#d1e153746">Sancti Martini</orgName>
+        <desc>ancienne abbaye, O.Ben., lieu détruit</desc>
+        <district type="commune">Autun</district>
+        <district type="canton">Autun</district>
+        <district type="département">Saône-et-Loire</district>
+        <idno type="GeoNames">11978874</idno>
+        <idno type="Dico-Topo">DT71-17266</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Martin_d%27Autun"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19408">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Pierre d'Auxerre</orgName>
+        <orgName ref="#d1e132157">Sancti Petri Autissiodori</orgName>
+        <desc>abbaye</desc>
+        <district type="commune">Auxerre</district>
+        <district type="canton">Auxerre</district>
+        <district type="département">Yone</district>
+        <idno type="GeoNames">11962684</idno>
+        <bibl>
+            <ptr
+                target="https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_d%27Auxerre#cite_note-care-3"
+            />
+        </bibl>
+    </org>
+    <org xml:id="d6e19410">
+        <orgName ref="#d1e148915">Sancti Petri Flaviniacensis</orgName>
+    </org>
+    <org xml:id="d6e19412">
+        <orgName ref="#d1e158466">Sancti Remigii</orgName>
+    </org>
+    <org xml:id="d6e19414">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Symphorien d'Autun</orgName>
+        <orgName ref="#d1e151460">Sancti Simphoriani</orgName>
+        <orgName ref="#d1e144368 #d1e145808">Sancti Symphoriani</orgName>
+        <orgName ref="#d1e6913">Sancti simphoriani Symphoriani</orgName>
+        <orgName ref="#d1e1610">sancti Symphoriani</orgName>
+        <desc>ancienne abbaye, O.Ben.</desc>
+        <district type="commune">Autun</district>
+        <district type="canton">Autun</district>
+        <district type="département">Sâone-et-Loire</district>
+        <idno type="GeoNames">11978875</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Symphorien_d%27Autun"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19416">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Étienne de Dijon</orgName>
+        <orgName ref="#d1e129052">Sancti Stephani Divionensis</orgName>
+        <orgName ref="#d1e132126">ecclesia nostra cathedrali beati Stephani</orgName>
+        <orgName ref="#d1e144266">sancti Stephani</orgName>
+        <desc>abbaye d’hommes, O.S.A.</desc>
+        <district type="commune">Dijon</district>
+        <district type="canton">Dijon</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962686</idno>
+        <idno type="Dico-Topo">DT21-06233</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-%C3%89tienne_de_Dijon"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19437">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Sept-Fons</orgName>
+        <orgName ref="#d1e149727">Septem Fontium</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Diou</district>
+        <district type="canton">Dompierre-sur-Besbre</district>
+        <district type="département">Allier</district>
+        <idno type="GeoNames">6458927</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Sept-Fons"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19439">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Saint-Seine</orgName>
+        <orgName ref="#d1e163390">St Seine</orgName>
+        <desc>abbaye d’hommes</desc>
+        <district type="commune">Saint-Seine-l'Abbaye</district>
+        <district type="canton">Fontaine-lès-Dijon</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962688</idno>
+        <idno type="Dico-Topo">DT21-06509</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Saint-Seine"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19441">
+        <orgName ref="#d1e148958 #d1e149019">Templi</orgName>
+    </org>
+    <org xml:id="d6e19500">
+        <orgName ref="#d1e132148">altaris Sancte Trinitatis</orgName>
+        <orgName ref="#d1e132163">sancte Trinitati</orgName>
+        <orgName ref="#d1e132168">sancte Trinitatis</orgName>
+    </org>
+    <org xml:id="d6e19506">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye de Bourras</orgName>
+        <orgName ref="#d1e60774">boniradii</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Saint-Malo-en-Donziois</district>
+        <district type="canton">Pouilly-sur-Loire</district>
+        <district type="département">Nièvre</district>
+        <idno type="GeoNames">11153370</idno>
+        <idno type="Dico-Topo">DT58-01071</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_de_Bourras"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19508">
+        <orgName ref="#d1e76349">buxerie</orgName>
+    </org>
+    <org xml:id="d6e19513">
+        <orgName ref="#d1e163984">capitulum Altisiodorensis ecclesiae</orgName>
+    </org>
+    <org xml:id="d6e19515">
+        <orgName ref="#d1e163505">ceux d’Eschalot</orgName>
+    </org>
+    <org xml:id="d6e19517">
+        <orgName ref="#d1e128804 #d1e128881">communie Divionis</orgName>
+    </org>
+    <org xml:id="d6e19521">
+        <orgName ref="#d1e26759">curia dei</orgName>
+    </org>
+    <org xml:id="d6e19523">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">La Maladière de Nogent</orgName>
+        <orgName ref="#d1e158643">domo leprosorum de Nojent</orgName>
+        <district type="commune">Nogent-lez-Montbard</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="Dico-Topo">DT21-04087</idno>
+    </org>
+    <org xml:id="d6e19561">
+        <orgName ref="#d1e24065">eidem ecclesie</orgName>
+    </org>
+    <org xml:id="d6e19563">
+        <orgName ref="#d1e70737">eisdem fratribus</orgName>
+    </org>
+    <org xml:id="d6e19881">
+        <!-- une ruisseau? -->
+        <orgName ref="#d1e36181">grinione</orgName>
+    </org>
+    <org xml:id="d6e19883">
+        <!-- plusieurs possibilités -->
+        <orgName ref="#d1e163499">habitans de Poiseul</orgName>
+    </org>
+    <org xml:id="d6e19885">
+        <orgName ref="#d1e159947">homines de Estalenta</orgName>
+    </org>
+    <org xml:id="d6e19893">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Maladière de Semur-en-Auxois</orgName>
+        <orgName ref="#d1e161099">leprosorum de Semuro</orgName>
+        <desc>lieu-dit</desc>
+        <district type="commune">Semur-en-Auxois</district>
+        <district type="canton">Semur-en-Auxois</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="Dico-Topo">DT21-04113</idno>
+    </org>
+    <org xml:id="d6e19897">
+        <orgName ref="#d1e168542">monachi</orgName>
+    </org>
+    <org xml:id="d6e19901">
+        <orgName ref="#d1e167152">monacho et capellano de Grinione</orgName>
+    </org>
+    <org xml:id="d6e19908">
+        <!-- identifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Jean-de-Réome</orgName>
+        <orgName ref="#d1e153376 #d1e152457">monasterii Sancti Johannis</orgName>
+        <orgName ref="#d1e131217 #d1e140430">Monasterio Sancti Johannis</orgName>
+        <orgName ref="#d1e117028">Monasterii sancti Johannis</orgName>
+        <orgName ref="#d1e157772">Monte Sancti Johannis</orgName>
+        <orgName ref="#d1e131126">Sancti Johannis</orgName>
+        <desc>abbaye d’hommes, O.Ben.</desc>
+        <district type="commune">Moutiers-Saint-Jean</district>
+        <district type="canton">Montbard</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11962694</idno>
+        <idno type="Dico-Topo">DT21-04933</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-Jean-de-R%C3%A9ome"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19912">
+        <!-- DS pour PB: Mores, O.Cist. -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Notre-Dame de Mores</orgName>
+        <orgName ref="#d1e60167">moris</orgName>
+        <desc>abbaye, O.Cist.</desc>
+        <district type="commune">Celles-sur-Ource</district>
+        <district type="canton">Bar-sur-Seine</district>
+        <district type="département">Aube</district>
+        <idno type="GeoNames">11185064</idno>
+        <idno type="Dico-Topo">DT10-02032</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_de_Mores"/>
+        </bibl>
+    </org>
+    <org xml:id="d6e19924">
+        <!-- DS pour DS/PB : revoir lecture-->
+        <orgName ref="#d1e26781">Caritate</orgName>
+    </org>
+    <org xml:id="d6e19927">
+        <orgName ref="#d1e156724">sanctae Romanae ecclesiae</orgName>
+    </org>
+    <org xml:id="d6e19939">
+        <orgName ref="#d1e137568">sancte Marie de Belna</orgName>
+    </org>
+    <org xml:id="d6e19952">
+        <!-- idetnifié par Petr Bartik -->
+        <orgName type="preferred" xml:lang="fre">Abbaye Saint-Bénigne de Dijon</orgName>
+        <orgName ref="#d1e136602">sancti Benigni Divionensis</orgName>
+        <desc>abbaye d’hommes, O.Ben.</desc>
+        <district type="commune">Dijon</district>
+        <district type="canton">Dijon</district>
+        <district type="département">Côte-d'Or</district>
+        <idno type="GeoNames">11963413</idno>
+        <idno type="Dico-Topo">DT21-06106</idno>
+        <bibl>
+            <ptr target="https://fr.wikipedia.org/wiki/Abbaye_Saint-B%C3%A9nigne_de_Dijon"/>
+        </bibl>
+    </org>
+</listOrg>
