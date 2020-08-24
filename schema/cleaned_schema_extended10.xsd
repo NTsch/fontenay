@@ -67,9 +67,17 @@
                                                             </xs:appinfo>
                                                         </xs:annotation>
                                                     </xs:element>
+                                                    <xs:element ref="respStmt"/>
                                                     <xs:element ref="p"/>
                                                 </xs:choice>
                                                 <xs:attributeGroup ref="standard"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element minOccurs="0" name="editionStmt">
+                                            <xs:complexType>
+                                                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:element ref="p"/>
+                                                </xs:choice>
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element minOccurs="0" ref="publicationStmt"/>
@@ -88,7 +96,7 @@
                                                 <xs:documentation xml:lang="eng"> supplies a bibliographic description of the copy text(s) from which an electronic text was derived or generated. </xs:documentation>
                                             </xs:annotation>
                                             <xs:complexType>
-                                                <xs:choice minOccurs="0">
+                                                <xs:choice minOccurs="0" maxOccurs="unbounded">
                                                     <xs:element ref="p"/>
                                                 </xs:choice>
                                                 <xs:attributeGroup ref="standard"/>
@@ -250,6 +258,7 @@
         <xs:complexType mixed="true">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="name"/>
+                <xs:element ref="persName"/>
                 <xs:element name="resp">
                     <xs:annotation>
                         <xs:appinfo source="EditVDU">
@@ -2025,6 +2034,7 @@
                 <xs:element ref="hi"/>
                 <xs:element ref="c"/>
                 <xs:element ref="sup"/>
+                <xs:element name="listBibl"/>
                 <xs:element ref="scope"/>
                 <!--Erweiterung-->
             </xs:choice>

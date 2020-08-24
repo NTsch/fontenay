@@ -15,7 +15,9 @@
 
     <xsl:template match="teiCorpus">
         <cei:cei>
-            <cei:teiHeader>
+            <xsl:apply-templates select="teiHeader"/>
+            
+            <!--<cei:teiHeader>
                 <cei:fileDesc>
                     <cei:titleStmt>
                         <cei:title>Recueil des actes de l’abbaye de Fontenay</cei:title>
@@ -29,7 +31,7 @@
                             les actes dont les originaux sont conservés.</cei:p>
                     </cei:sourceDesc>
                 </cei:fileDesc>
-            </cei:teiHeader>
+            </cei:teiHeader>-->
             <cei:text>
                 <cei:group>
                     <xsl:apply-templates select="TEI"/>
@@ -37,6 +39,10 @@
             </cei:text>
         </cei:cei>
     </xsl:template>
+    
+    <!--<xsl:template match="teiCorpus/teiHeader">
+        <xsl:apply-templates/>
+    </xsl:template>-->
 
     <xsl:template match="sourceDesc">
         <cei:sourceDesc>
@@ -121,7 +127,7 @@
     </xsl:template>
 
     <xsl:template
-        match="author | geogName | handShift | height | idno | name | note | orgName | p | placeName | settlement | surname | teiHeader | title | width">
+        match="author | editionStmt | fileDesc | geogName | handShift | height | idno | name | note | orgName | p | placeName | publicationStmt | resp | respStmt | settlement | surname | teiHeader | title | titleStmt | width">
         <xsl:element name="cei:{local-name()}">
             <xsl:apply-templates/>
             <!--übernimmt keine Attribute-->
