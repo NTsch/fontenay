@@ -2,10 +2,7 @@
 
 <!--Transformation von TEI-kodiertem Urkunden-Korpus zu CEI.-->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0"
-    xmlns:cei="http://www.monasterium.net/NS/cei"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0" xmlns:cei="http://www.monasterium.net/NS/cei" xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     <!--TEI als default namespace aus der Quelle übernehmen-->
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
 
@@ -25,8 +22,7 @@
                         <cei:p>Distribué par Telma</cei:p>
                     </cei:publicationStmt>
                     <cei:sourceDesc>
-                        <cei:p>Créé sur MS Word, balisé sur oXgenXML. Version partielle contenant
-                            les actes dont les originaux sont conservés.</cei:p>
+                        <cei:p>Créé sur MS Word, balisé sur oXgenXML. Version partielle contenant les actes dont les originaux sont conservés.</cei:p>
                     </cei:sourceDesc>
                 </cei:fileDesc>
             </cei:teiHeader>
@@ -46,7 +42,7 @@
 
     <xsl:template match="TEI">
         <cei:text type="charter">
-            <!--charter-type notwendig für mom-Import-->
+            <!--charter-type notwendig für MOMca-Import-->
             <cei:front>
                 <cei:sourceDesc>
                     <cei:sourceDescVolltext>
@@ -72,8 +68,7 @@
                     <cei:diplomaticAnalysis>
                         <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listBibl"/>
                         <cei:listBiblEdition>
-                            <xsl:apply-templates
-                                select="teiHeader/fileDesc/sourceDesc/listWit/witness/bibl"/>
+                            <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listWit/witness/bibl"/>
                         </cei:listBiblEdition>
                     </cei:diplomaticAnalysis>
                 </cei:chDesc>
@@ -83,9 +78,7 @@
             </cei:body>
             <cei:back>
                 <cei:divNotes>
-                    <xsl:apply-templates
-                        select="teiHeader/fileDesc/sourceDesc/listWit/witness/msDesc/physDesc/additions"
-                    />
+                    <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listWit/witness/msDesc/physDesc/additions"/>
                 </cei:divNotes>
                 <cei:class/>
             </cei:back>
@@ -120,30 +113,162 @@
         </cei:note>
     </xsl:template>
 
-    <xsl:template
-        match="author | geogName | handShift | height | idno | name | note | orgName | p | placeName | settlement | surname | teiHeader | title | width">
-        <xsl:element name="cei:{local-name()}">
+    <xsl:template match="title">
+        <cei:title>
             <xsl:apply-templates/>
-            <!--übernimmt keine Attribute-->
-        </xsl:element>
+        </cei:title>
     </xsl:template>
 
-    <xsl:template match="del | graphic | pc | supplied">
-        <xsl:element name="cei:{local-name()}">
+    <xsl:template match="teiHeader">
+        <cei:teiHeader>
+            <xsl:apply-templates/>
+        </cei:teiHeader>
+    </xsl:template>
+
+    <xsl:template match="settlement">
+        <cei:settlement>
+            <xsl:apply-templates/>
+        </cei:settlement>
+    </xsl:template>
+
+    <xsl:template match="p">
+        <cei:p>
+            <xsl:apply-templates/>
+        </cei:p>
+    </xsl:template>
+
+    <xsl:template match="note">
+        <cei:note>
+            <xsl:apply-templates/>
+        </cei:note>
+    </xsl:template>
+
+    <xsl:template match="name">
+        <cei:name>
+            <xsl:apply-templates/>
+        </cei:name>
+    </xsl:template>
+
+    <xsl:template match="surname">
+        <cei:surname>
+            <xsl:apply-templates/>
+        </cei:surname>
+    </xsl:template>
+
+    <xsl:template match="orgName">
+        <cei:orgName>
+            <xsl:apply-templates/>
+        </cei:orgName>
+    </xsl:template>
+
+    <xsl:template match="placeName">
+        <cei:placeName>
+            <xsl:apply-templates/>
+        </cei:placeName>
+    </xsl:template>
+
+    <xsl:template match="geogName">
+        <cei:geogName>
+            <xsl:apply-templates/>
+        </cei:geogName>
+    </xsl:template>
+
+    <xsl:template match="idno">
+        <cei:idno>
+            <xsl:apply-templates/>
+        </cei:idno>
+    </xsl:template>
+
+    <xsl:template match="height">
+        <cei:height>
+            <xsl:apply-templates/>
+        </cei:height>
+    </xsl:template>
+
+    <xsl:template match="width">
+        <cei:width>
+            <xsl:apply-templates/>
+        </cei:width>
+    </xsl:template>
+
+    <xsl:template match="handShift">
+        <cei:handShift>
+            <xsl:apply-templates/>
+        </cei:handShift>
+    </xsl:template>
+
+    <xsl:template match="author">
+        <cei:author>
+            <xsl:apply-templates/>
+        </cei:author>
+    </xsl:template>
+
+    <xsl:template match="supplied">
+        <cei:supplied>
             <xsl:copy-of select="@*"/>
-            <!--übernimmt Attribute-->
             <xsl:apply-templates/>
-        </xsl:element>
+        </cei:supplied>
     </xsl:template>
 
-    <xsl:template match="pb | pc | seg | w">
-        <xsl:element name="cei:{local-name()}">
+    <xsl:template match="pc">
+        <cei:pc>
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </cei:pc>
+    </xsl:template>
+
+    <xsl:template match="graphic">
+        <cei:graphic>
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </cei:graphic>
+    </xsl:template>
+
+    <xsl:template match="del">
+        <cei:del>
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </cei:del>
+    </xsl:template>
+
+    <xsl:template match="w">
+        <cei:w>
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
             <xsl:copy-of select="@*[name() != 'xml:id']"/>
             <xsl:apply-templates/>
-        </xsl:element>
+        </cei:w>
+    </xsl:template>
+
+    <xsl:template match="seg">
+        <cei:seg>
+            <xsl:attribute name="id">
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:apply-templates/>
+        </cei:seg>
+    </xsl:template>
+
+    <xsl:template match="pc">
+        <cei:pc>
+            <xsl:attribute name="id">
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:apply-templates/>
+        </cei:pc>
+    </xsl:template>
+
+    <xsl:template match="pb">
+        <cei:pb>
+            <xsl:attribute name="id">
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:apply-templates/>
+        </cei:pb>
     </xsl:template>
 
     <xsl:template match="bibl">
@@ -175,46 +300,43 @@
         </cei:listBibl>
     </xsl:template>
 
+    <!--making dates CEI-compliant: -->
+
     <xsl:template match="date | origDate">
-        <!--bringt date in CEI-konformes Format-->
-        <xsl:choose>
-            <xsl:when test="matches(string()[normalize-space()], '^\d\d\d\d-\d\d\d\d$')">
-                <cei:dateRange>
-                    <xsl:attribute name="from">
-                        <xsl:value-of select="tokenize(text()[normalize-space()], '-')[1]"/>
-                        <xsl:text>9999</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="to">
-                        <xsl:value-of select="tokenize(text()[normalize-space()], '-')[2]"/>
-                        <xsl:text>9999</xsl:text>
-                    </xsl:attribute>
-                </cei:dateRange>
-            </xsl:when>
-            <xsl:when test="@when castable as xs:date">
-                <cei:date>
+        <cei:date>
+            <xsl:choose>
+                <xsl:when test="@when castable as xs:date">
                     <xsl:attribute name="value">
                         <xsl:value-of select="format-date(@when, '[Y][M,2][D,2]')"/>
                     </xsl:attribute>
-                    <xsl:value-of select="./string()"/>
-                </cei:date>
-            </xsl:when>
-            <xsl:when test="matches(./string(), '^\d\d\d\d$')">
-                <cei:date>
+                </xsl:when>
+                <xsl:when test="matches(./string(), '^\d\d\d\d$')">
                     <xsl:attribute name="value">
                         <xsl:value-of select="concat(./string(), '9999')"/>
                     </xsl:attribute>
-                    <xsl:value-of select="./string()"/>
-                </cei:date>
-            </xsl:when>
-            <xsl:otherwise>
-                <cei:date>
+                </xsl:when>
+                <xsl:otherwise>
                     <xsl:attribute name="value">
                         <xsl:value-of select="99999999"/>
                     </xsl:attribute>
-                    <xsl:value-of select="./string()"/>
-                </cei:date>
-            </xsl:otherwise>
-        </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+
+    <xsl:template match="(date | origDate)[matches(string()[normalize-space()], '^\d\d\d\d-\d\d\d\d$')]">
+        <cei:dateRange>
+            <xsl:attribute name="from">
+                <xsl:value-of select="tokenize(text()[normalize-space()], '-')[1]"/>
+                <xsl:text>9999</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="to">
+                <xsl:value-of select="tokenize(text()[normalize-space()], '-')[2]"/>
+                <xsl:text>9999</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
     </xsl:template>
 
     <xsl:template match="witness[@n != 'A']">
@@ -259,8 +381,7 @@
     </xsl:template>
 
     <xsl:template match="layout">
-        <cei:p type="layout">Columns: <xsl:value-of select="@columns"/>, Lines: <xsl:value-of
-                select="@writtenLines"/> - <xsl:apply-templates select="normalize-space(.)"/>
+        <cei:p type="layout">Columns: <xsl:value-of select="@columns"/>, Lines: <xsl:value-of select="@writtenLines"/> - <xsl:apply-templates select="normalize-space(.)"/>
         </cei:p>
     </xsl:template>
 
@@ -500,8 +621,7 @@
 
     <xsl:template match="hi">
         <xsl:element name="cei:{local-name()}">
-            <xsl:copy-of
-                select="@*[name() != 'xml:space' and not((name() = 'rend' and contains(., 'background')))]"/>
+            <xsl:copy-of select="@*[name() != 'xml:space' and not((name() = 'rend' and contains(., 'background')))]"/>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
@@ -676,6 +796,12 @@
             <xsl:copy-of select="@*"/>
             <xsl:attribute name="type">facsimile</xsl:attribute>
         </cei:graphic>
+    </xsl:template>
+
+    <xsl:template match="damage">
+        <cei:damage>
+            <xsl:apply-templates/>
+        </cei:damage>
     </xsl:template>
 
     <!--<xsl:template match="ptr"/>-->
