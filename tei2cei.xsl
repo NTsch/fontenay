@@ -93,10 +93,13 @@
         </cei:witnessOrig>
         <xsl:if test="witness[not(@n = 'A')]">
             <cei:witListPar>
+                <xsl:apply-templates select="head"/>
                 <xsl:apply-templates select="witness[not(@n = 'A')]"/>
             </cei:witListPar>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="bibl[parent::witnessOrig]"/>
 
     <xsl:template match="abstract">
         <cei:abstract>
@@ -215,6 +218,17 @@
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
         </cei:pc>
+    </xsl:template>
+    
+    <xsl:template match="facsimile">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="graphic[parent::facsimile]">
+        <cei:graphic>
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="type">facsimile</xsl:attribute>
+        </cei:graphic>
     </xsl:template>
 
     <xsl:template match="graphic">
@@ -672,9 +686,7 @@
     </xsl:template>
 
     <xsl:template match="geogFeat">
-        <cei:geogName>
-            <xsl:copy-of select="@*"/>
-        </cei:geogName>
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="lb">
@@ -700,8 +712,6 @@
             <xsl:apply-templates/>
         </cei:space>
     </xsl:template>
-
-    <xsl:template match="bibl[parent::witnessOrig]"/>
 
     <xsl:template match="witDetail">
         <cei:witDetail>
@@ -771,10 +781,9 @@
     </xsl:template>
 
     <xsl:template match="head">
-        <cei:pTenor>
-            <xsl:attribute name="type">head</xsl:attribute>
+        <cei:head>
             <xsl:apply-templates/>
-        </cei:pTenor>
+        </cei:head>
     </xsl:template>
 
     <xsl:template match="desc">
@@ -785,17 +794,6 @@
         <cei:encodingDesc>
             <xsl:apply-templates/>
         </cei:encodingDesc>
-    </xsl:template>
-
-    <xsl:template match="facsimile">
-        <xsl:apply-templates/>
-    </xsl:template>
-
-    <xsl:template match="graphic[parent::facsimile]">
-        <cei:graphic>
-            <xsl:copy-of select="@*"/>
-            <xsl:attribute name="type">facsimile</xsl:attribute>
-        </cei:graphic>
     </xsl:template>
 
     <xsl:template match="damage">
