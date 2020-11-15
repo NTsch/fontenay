@@ -212,6 +212,21 @@
             <xsl:apply-templates/>
         </cei:supplied>
     </xsl:template>
+    
+    <xsl:template match="supplied[parent::damage]">
+        <cei:supplied>
+            <xsl:copy-of select="@*"/>
+            <cei:damage>
+                <xsl:apply-templates select="../supplied/*"/>
+            </cei:damage>
+        </cei:supplied>
+    </xsl:template>
+    
+    <xsl:template match="damage/*[name() != supplied]">
+        <cei:damage>
+            <xsl:apply-templates/>
+        </cei:damage>
+    </xsl:template>
 
     <xsl:template match="pc">
         <cei:pc>
@@ -491,14 +506,6 @@
         </cei:expan>
     </xsl:template>
 
-    <xsl:template match="supplied[parent::damage]">
-        <xsl:element name="cei:{local-name()}">
-            <xsl:copy-of select="@*"/>
-            <cei:damage>
-                <xsl:apply-templates/>
-            </cei:damage>
-        </xsl:element>
-    </xsl:template>
 
     <xsl:template match="w[parent::soCalled]">
         <cei:w>
@@ -794,12 +801,6 @@
         <cei:encodingDesc>
             <xsl:apply-templates/>
         </cei:encodingDesc>
-    </xsl:template>
-
-    <xsl:template match="damage">
-        <cei:damage>
-            <xsl:apply-templates/>
-        </cei:damage>
     </xsl:template>
 
     <!--<xsl:template match="ptr"/>-->
