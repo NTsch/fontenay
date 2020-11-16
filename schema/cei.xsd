@@ -2301,7 +2301,7 @@
                 <!--Erweiterung-->
                 <xs:element ref="figure"/>
                 <!--Erweiterung-->
-                <xs:element name="surplus"/>
+                <xs:element ref="surplus"/>
                 <!--Erweiterung-->
                 <xs:element name="metamark"/>
                 <!--Erweiterung-->
@@ -3232,7 +3232,7 @@
                             <!--Erweiterung-->
                             <xs:element ref="witDetail"/>
                             <!--Erweiterung-->
-                            <xs:element name="surplus"/>
+                            <xs:element ref="surplus"/>
                             <!--Erweiterung-->
                             <xs:group ref="biblArch"/>
                             <xs:group ref="layout"/>
@@ -3306,6 +3306,17 @@
                 <xs:element ref="foreign"/>
             </xs:choice>
             <xs:attribute name="type"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="surplus">
+        <xs:annotation>
+            <xs:documentation>Überflüssiger Text, entspricht dem TEI-Element des selben Namens.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0">
+                <xs:element ref="w"/>
+                <xs:element ref="del"/>
+            </xs:choice>
         </xs:complexType>
     </xs:element>
     <!--Erweiterung-Ende-->
@@ -3464,7 +3475,7 @@
                 <xs:element ref="lb"/>
                 <xs:element ref="pb"/>
                 <xs:element ref="sic"/>
-                <xs:element name="surplus"/>
+                <xs:element ref="surplus"/>
                 <!--Erweiterung-->
                 <xs:group ref="Referenz"/>
             </xs:choice>
