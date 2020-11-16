@@ -902,8 +902,6 @@
                                             <xs:element ref="bibl"/>
                                         </xs:choice>
                                     </xs:choice>
-                                    <xs:attribute name="type"/>
-                                    <!--Erweiterung-->
                                     <xs:attributeGroup ref="standard"/>
                                 </xs:complexType>
                             </xs:element>
@@ -1266,6 +1264,19 @@
             <xs:attribute name="part"/>
         </xs:complexType>
     </xs:element>
+    <xs:element name="head">
+        <xs:annotation>
+            <xs:appinfo source="EditVDU">
+                <xrxe:relevant>false</xrxe:relevant>
+            </xs:appinfo>
+            <xs:documentation xml:lang="deu">Eine Überschrift </xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="hi"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
     <!--Erweiterung-Ende-->
     <xs:element name="witListPar">
         <xs:annotation>
@@ -1283,7 +1294,7 @@
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="head"/>
+                <xs:element ref="head"/>
                 <xs:element ref="witness"/>
             </xs:choice>
             <xs:attributeGroup ref="lang"/>
@@ -2209,7 +2220,7 @@
                 <xs:group ref="Formular"/>
                 <xs:element ref="pTenor"/>
                 <xs:element ref="witDetail"/>
-                <xs:element name="head"/>
+                <xs:element ref="head"/>
                 <!--Erweiterung-->
             </xs:choice>
             <xs:attributeGroup ref="standard"/>
@@ -3960,12 +3971,11 @@
         </xs:annotation>
         <xs:sequence>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="head" type="xs:string">
+                <xs:element ref="head">
                     <xs:annotation>
                         <xs:appinfo source="EditVDU">
                             <xrxe:relevant>false</xrxe:relevant>
                         </xs:appinfo>
-                        <xs:documentation xml:lang="deu">Eine Überschrift </xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element ref="h1">
