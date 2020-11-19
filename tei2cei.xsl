@@ -98,7 +98,7 @@
             </cei:witListPar>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="bibl[parent::witnessOrig]"/>
 
     <xsl:template match="abstract">
@@ -212,7 +212,7 @@
             <xsl:apply-templates/>
         </cei:supplied>
     </xsl:template>
-    
+
     <xsl:template match="supplied[parent::damage]">
         <cei:supplied>
             <xsl:copy-of select="@*"/>
@@ -221,7 +221,7 @@
             </cei:damage>
         </cei:supplied>
     </xsl:template>
-    
+
     <xsl:template match="damage/*[name() != supplied]">
         <cei:damage>
             <xsl:apply-templates/>
@@ -234,11 +234,11 @@
             <xsl:apply-templates/>
         </cei:pc>
     </xsl:template>
-    
+
     <xsl:template match="facsimile">
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="graphic[parent::facsimile]">
         <cei:graphic>
             <xsl:copy-of select="@*"/>
@@ -339,19 +339,38 @@
                         <xsl:value-of select="format-date(@when, '[Y][M,2][D,2]')"/>
                     </xsl:attribute>
                 </xsl:when>
-                <xsl:when test="matches(./string(), '^\d\d\d\d$')">
+                <xsl:when test="@notBefore castable as xs:date">
                     <xsl:attribute name="value">
-                        <xsl:value-of select="concat(./string(), '9999')"/>
+                        <xsl:value-of select="format-date(@notBefore, '[Y][M,2][D,2]')"/>
+                    </xsl:attribute>
+                </xsl:when>
+                <xsl:when test="matches(./string(), '^\s*\d\d\d\d\s*$')">
+                    <xsl:attribute name="value">
+                        <xsl:value-of select="concat(./string()[normalize-space()], '9999')"/>
                     </xsl:attribute>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:attribute name="value">
-                        <xsl:value-of select="99999999"/>
+                        <xsl:value-of select="substring(concat(replace(@when, '-', ''), '99999999'), 1, 8)"/>
                     </xsl:attribute>
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:apply-templates/>
         </cei:date>
+    </xsl:template>
+
+    <xsl:template match="date[@notBefore][@notAfter]">
+        <cei:dateRange>
+            <xsl:attribute name="from">
+                <xsl:value-of select="substring(concat(replace(@notBefore, '-', ''), '99999999'), 1, 4)"/>
+                <xsl:text>9999</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="to">
+                <xsl:value-of select="substring(concat(replace(@notAfter, '-', ''), '99999999'), 1, 4)"/>
+                <xsl:text>9999</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
     </xsl:template>
 
     <xsl:template match="(date | origDate)[matches(string()[normalize-space()], '^\d\d\d\d-\d\d\d\d$')]">
@@ -367,6 +386,7 @@
             <xsl:apply-templates/>
         </cei:dateRange>
     </xsl:template>
+
 
     <xsl:template match="witness[@n != 'A']">
         <cei:witness>
