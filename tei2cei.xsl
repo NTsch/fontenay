@@ -2,7 +2,10 @@
 
 <!--Transformation von TEI-kodiertem Urkunden-Korpus zu CEI.-->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0" xmlns:cei="http://www.monasterium.net/NS/cei" xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0"
+    xmlns:cei="http://www.monasterium.net/NS/cei"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     <!--TEI als default namespace aus der Quelle übernehmen-->
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
 
@@ -22,7 +25,8 @@
                         <cei:p>Distribué par Telma</cei:p>
                     </cei:publicationStmt>
                     <cei:sourceDesc>
-                        <cei:p>Créé sur MS Word, balisé sur oXgenXML. Version partielle contenant les actes dont les originaux sont conservés.</cei:p>
+                        <cei:p>Créé sur MS Word, balisé sur oXgenXML. Version partielle contenant
+                            les actes dont les originaux sont conservés.</cei:p>
                     </cei:sourceDesc>
                 </cei:fileDesc>
             </cei:teiHeader>
@@ -61,14 +65,14 @@
                     <!--automatische Nummerierung für jede Urkunde-->
                 </cei:idno>
                 <cei:chDesc>
-                    <xsl:apply-templates select="facsimile"/>
                     <xsl:apply-templates select="teiHeader/profileDesc/abstract"/>
                     <xsl:apply-templates select="teiHeader/profileDesc/creation"/>
                     <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listWit"/>
                     <cei:diplomaticAnalysis>
                         <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listBibl"/>
                         <cei:listBiblEdition>
-                            <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listWit/witness/bibl"/>
+                            <xsl:apply-templates
+                                select="teiHeader/fileDesc/sourceDesc/listWit/witness/bibl"/>
                         </cei:listBiblEdition>
                     </cei:diplomaticAnalysis>
                 </cei:chDesc>
@@ -78,7 +82,9 @@
             </cei:body>
             <cei:back>
                 <cei:divNotes>
-                    <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/listWit/witness/msDesc/physDesc/additions"/>
+                    <xsl:apply-templates
+                        select="teiHeader/fileDesc/sourceDesc/listWit/witness/msDesc/physDesc/additions"
+                    />
                 </cei:divNotes>
                 <cei:class/>
             </cei:back>
@@ -87,16 +93,37 @@
 
     <xsl:template match="listWit">
         <cei:witnessOrig>
-            <cei:traditioForm>Original</cei:traditioForm>
-            <xsl:apply-templates select="witness[@n = 'A']/node()[not(name() = 'bibl')]"/>
-            <!--witness A ist der originale Textzeuge-->
+            <xsl:if
+                test="contains(witness[@n = ('A', 'A1')]/msDesc/physDesc/objectDesc/supportDesc/support/p/text(), 'Original en parchemin')">
+                <cei:traditioForm>Original</cei:traditioForm>
+            </xsl:if>
+            <xsl:apply-templates select="witness[@n = ('A', 'A1')]/node()[not(name() = 'bibl')]"/>
+            <xsl:for-each select="./ancestor::TEI/facsimile/graphic[position() &lt; 3]">
+                <cei:figure>
+                    <xsl:apply-templates select="."/>
+                </cei:figure>
+            </xsl:for-each>
         </cei:witnessOrig>
-        <xsl:if test="witness[not(@n = 'A')]">
+        <xsl:if test="witness[not(@n = ('A', 'A1'))]">
             <cei:witListPar>
                 <xsl:apply-templates select="head"/>
-                <xsl:apply-templates select="witness[not(@n = 'A')]"/>
+                <xsl:apply-templates select="witness[not(@n = ('A', 'A1'))]"/>
             </cei:witListPar>
         </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="witness[not(@n = ('A', 'A1'))]">
+        <cei:witness>
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates select="node()[not(name() = 'bibl')]"/>
+            <xsl:if test="@n = 'A2'">
+                <xsl:for-each select="./ancestor::TEI/facsimile/graphic[position() &gt; 2]">
+                    <cei:figure>
+                        <xsl:apply-templates select="."/>
+                    </cei:figure>
+                </xsl:for-each>
+            </xsl:if>
+        </cei:witness>
     </xsl:template>
 
     <xsl:template match="bibl[parent::witnessOrig]"/>
@@ -213,6 +240,16 @@
         </cei:supplied>
     </xsl:template>
 
+    <xsl:template match="damage">
+        <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="damage[not(supplied)]">
+        <cei:damage>
+            <xsl:apply-templates/>
+        </cei:damage>
+    </xsl:template>
+
     <xsl:template match="supplied[parent::damage]">
         <cei:supplied>
             <xsl:copy-of select="@*"/>
@@ -220,12 +257,6 @@
                 <xsl:apply-templates select="../supplied/*"/>
             </cei:damage>
         </cei:supplied>
-    </xsl:template>
-
-    <xsl:template match="damage/*[name() != supplied]">
-        <cei:damage>
-            <xsl:apply-templates/>
-        </cei:damage>
     </xsl:template>
 
     <xsl:template match="pc">
@@ -239,18 +270,19 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:template match="graphic[parent::facsimile]">
+    <xsl:template match="graphic">
         <cei:graphic>
-            <xsl:copy-of select="@*"/>
-            <xsl:attribute name="type">facsimile</xsl:attribute>
+            <xsl:copy-of select="@url"/>
         </cei:graphic>
     </xsl:template>
 
-    <xsl:template match="graphic">
-        <cei:graphic>
-            <xsl:copy-of select="@*"/>
+    <xsl:template match="/teiCorpus/TEI[18]/text[1]/body[1]/p[1]/graphic[1]">
+        <cei:pict>
+            <xsl:attribute name="type">
+                <xsl:value-of select="@rend"/>
+            </xsl:attribute>
             <xsl:apply-templates/>
-        </cei:graphic>
+        </cei:pict>
     </xsl:template>
 
     <xsl:template match="del">
@@ -265,7 +297,7 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:copy-of select="@*[not(name() = 'xml:id')]"/>
             <xsl:apply-templates/>
         </cei:w>
     </xsl:template>
@@ -275,7 +307,7 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:copy-of select="@*[not(name() = 'xml:id')]"/>
             <xsl:apply-templates/>
         </cei:seg>
     </xsl:template>
@@ -285,7 +317,7 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:copy-of select="@*[not(name() = 'xml:id')]"/>
             <xsl:apply-templates/>
         </cei:pc>
     </xsl:template>
@@ -295,14 +327,14 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <xsl:copy-of select="@*[name() != 'xml:id']"/>
+            <xsl:copy-of select="@*[not(name() = 'xml:id')]"/>
             <xsl:apply-templates/>
         </cei:pb>
     </xsl:template>
 
     <xsl:template match="bibl">
         <cei:bibl>
-            <xsl:copy-of select="@*[name() != 'default' and name() != 'sameAs']"/>
+            <xsl:copy-of select="@*[not(name() = ('xml:id', 'sameAs', 'default'))]"/>
             <xsl:if test="@sameAs">
                 <xsl:attribute name="key">
                     <xsl:value-of select="@sameAs"/>
@@ -322,77 +354,89 @@
                     <xsl:attribute name="n">inventaires</xsl:attribute>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:copy-of select="@*[name() != 'default']"/>
+                    <xsl:copy-of select="@*[not(name() = 'default')]"/>
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:apply-templates/>
         </cei:listBibl>
     </xsl:template>
 
-    <!--making dates CEI-compliant: -->
-
     <xsl:template match="date | origDate">
-        <cei:date>
-            <xsl:choose>
-                <xsl:when test="@when castable as xs:date">
+        <xsl:choose>
+            <xsl:when test="@when castable as xs:date">
+                <cei:date>
                     <xsl:attribute name="value">
                         <xsl:value-of select="format-date(@when, '[Y][M,2][D,2]')"/>
                     </xsl:attribute>
-                </xsl:when>
-                <xsl:when test="@notBefore castable as xs:date">
+                    <xsl:apply-templates/>
+                </cei:date>
+            </xsl:when>
+            <xsl:when test=".[@notBefore][@notAfter]">
+                <cei:dateRange>
+                    <xsl:attribute name="from">
+                        <xsl:value-of
+                            select="substring(concat(replace(@notBefore, '-', ''), '99999999'), 1, 4)"/>
+                        <xsl:text>9999</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="to">
+                        <xsl:value-of
+                            select="substring(concat(replace(@notAfter, '-', ''), '99999999'), 1, 4)"/>
+                        <xsl:text>9999</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </cei:dateRange>
+            </xsl:when>
+            <xsl:when test="@notBefore castable as xs:date">
+                <cei:date>
                     <xsl:attribute name="value">
                         <xsl:value-of select="format-date(@notBefore, '[Y][M,2][D,2]')"/>
                     </xsl:attribute>
-                </xsl:when>
-                <xsl:when test="matches(./string(), '^\s*\d\d\d\d\s*$')">
+                    <xsl:apply-templates/>
+                </cei:date>
+            </xsl:when>
+            <xsl:when test="matches(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[\W]*$')">
+                <cei:date>
                     <xsl:attribute name="value">
-                        <xsl:value-of select="concat(./string()[normalize-space()], '9999')"/>
+                        <xsl:value-of
+                            select="concat(replace(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[\W]*$', '$1'), '9999')"
+                        />
                     </xsl:attribute>
-                </xsl:when>
-                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </cei:date>
+            </xsl:when>
+            <!--TODO: Elegantere Behandlung für Monatsnamen einbauen-->
+            <!--            <xsl:when test="matches(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[\W]* \d+ (\w+)$')">
+                <xsl:attribute name="value">
+                    <xsl:variable name="month" select=""/>
+                </xsl:attribute>
+                <xsl:apply-templates/>
+            </xsl:when>-->
+            <xsl:when
+                test="matches(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[-\s/]*(\d\d\d\d)[\W]*$')">
+                <cei:dateRange>
+                    <xsl:attribute name="from">
+                        <xsl:value-of
+                            select="concat(replace(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[-\s/]*(\d\d\d\d)[\W]*$', '$1'), '9999')"
+                        />
+                    </xsl:attribute>
+                    <xsl:attribute name="to">
+                        <xsl:value-of
+                            select="concat(replace(text()[normalize-space()][1], '^[\W]*(\d\d\d\d)[-\s/]*(\d\d\d\d)[\W]*$', '$2'), '9999')"
+                        />
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </cei:dateRange>
+            </xsl:when>
+            <xsl:otherwise>
+                <cei:date>
                     <xsl:attribute name="value">
-                        <xsl:value-of select="substring(concat(replace(@when, '-', ''), '99999999'), 1, 8)"/>
+                        <xsl:value-of
+                            select="substring(concat(replace(@when, '-', ''), '99999999'), 1, 8)"/>
                     </xsl:attribute>
-                </xsl:otherwise>
-            </xsl:choose>
-            <xsl:apply-templates/>
-        </cei:date>
-    </xsl:template>
-
-    <xsl:template match="date[@notBefore][@notAfter]">
-        <cei:dateRange>
-            <xsl:attribute name="from">
-                <xsl:value-of select="substring(concat(replace(@notBefore, '-', ''), '99999999'), 1, 4)"/>
-                <xsl:text>9999</xsl:text>
-            </xsl:attribute>
-            <xsl:attribute name="to">
-                <xsl:value-of select="substring(concat(replace(@notAfter, '-', ''), '99999999'), 1, 4)"/>
-                <xsl:text>9999</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </cei:dateRange>
-    </xsl:template>
-
-    <xsl:template match="(date | origDate)[matches(string()[normalize-space()], '^\d\d\d\d-\d\d\d\d$')]">
-        <cei:dateRange>
-            <xsl:attribute name="from">
-                <xsl:value-of select="tokenize(text()[normalize-space()], '-')[1]"/>
-                <xsl:text>9999</xsl:text>
-            </xsl:attribute>
-            <xsl:attribute name="to">
-                <xsl:value-of select="tokenize(text()[normalize-space()], '-')[2]"/>
-                <xsl:text>9999</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </cei:dateRange>
-    </xsl:template>
-
-
-    <xsl:template match="witness[@n != 'A']">
-        <cei:witness>
-            <xsl:copy-of select="@*"/>
-            <xsl:apply-templates select="*[not(name() = 'bibl')]"/>
-        </cei:witness>
+                    <xsl:apply-templates/>
+                </cei:date>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="physDesc">
@@ -430,7 +474,8 @@
     </xsl:template>
 
     <xsl:template match="layout">
-        <cei:p type="layout">Columns: <xsl:value-of select="@columns"/>, Lines: <xsl:value-of select="@writtenLines"/> - <xsl:apply-templates select="normalize-space(.)"/>
+        <cei:p type="layout">Columns: <xsl:value-of select="@columns"/>, Lines: <xsl:value-of
+                select="@writtenLines"/> - <xsl:apply-templates select="normalize-space(.)"/>
         </cei:p>
     </xsl:template>
 
@@ -455,6 +500,15 @@
             </xsl:if>
             <xsl:apply-templates/>
         </cei:figure>
+    </xsl:template>
+
+    <xsl:template match="/teiCorpus/TEI[31]/text[1]/body[1]/p[1]/figure[1]">
+        <cei:pict>
+            <xsl:attribute name="type">
+                <xsl:value-of select="@rend"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:pict>
     </xsl:template>
 
     <xsl:template match="desc[parent::figure]">
@@ -607,9 +661,16 @@
     </xsl:template>
 
     <xsl:template match="gap">
-        <cei:space>
-            <xsl:apply-templates/>
-        </cei:space>
+        <xsl:choose>
+            <xsl:when test="parent::damage">
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:otherwise>
+                <cei:space>
+                    <xsl:apply-templates/>
+                </cei:space>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="num">
@@ -662,7 +723,8 @@
 
     <xsl:template match="hi">
         <xsl:element name="cei:{local-name()}">
-            <xsl:copy-of select="@*[name() != 'xml:space' and not((name() = 'rend' and contains(., 'background')))]"/>
+            <xsl:copy-of
+                select="@*[not(name() = 'xml:space') and not((name() = 'rend' and contains(., 'background')))]"/>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
@@ -687,7 +749,7 @@
 
     <xsl:template match="add">
         <cei:add>
-            <xsl:copy-of select="@*[name() != 'place' and name() != 'corresp']"/>
+            <xsl:copy-of select="@*[not(name() = ('place', 'corresp'))]"/>
             <xsl:if test="@corresp">
                 <xsl:attribute name="n">
                     <xsl:value-of select="@corresp"/>
@@ -825,4 +887,324 @@
 
     <!--<xsl:template match="ptr"/>-->
     <!--<xsl:template match="ref"/>-->
+
+    <!--=====================-->
+    <!-- manuelle Datumsangaben-->
+    <!--=====================-->
+    <xsl:template match="/teiCorpus/TEI[170]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11310101</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[171]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11251231</xsl:attribute>
+            <xsl:attribute name="to">11360831</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[173]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11321231</xsl:attribute>
+            <xsl:attribute name="to">11391231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[174]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11361231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[175]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11420901</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[176]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11421108</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[178]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11440430</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[179]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11450616</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[180]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11451231</xsl:attribute>
+            <xsl:attribute name="to">11460603</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[183]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11480426</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[185]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11471231</xsl:attribute>
+            <xsl:attribute name="to">11481231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[189]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11571220</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[190]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11621231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[191]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11541231</xsl:attribute>
+            <xsl:attribute name="to">11621231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[192]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11541231</xsl:attribute>
+            <xsl:attribute name="to">11621231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[193]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11541231</xsl:attribute>
+            <xsl:attribute name="to">11621231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[194]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11640403</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[196]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11650415</xsl:attribute>
+            <xsl:attribute name="to">11650416</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[197]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11691111</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[206]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11681231</xsl:attribute>
+            <xsl:attribute name="to">11751018</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[210]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11821203</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[211]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11711231</xsl:attribute>
+            <xsl:attribute name="to">11821231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[212]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11830308</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[214]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11841231</xsl:attribute>
+            <xsl:attribute name="to">11850928</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[217]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11711231</xsl:attribute>
+            <xsl:attribute name="to">11891231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[219]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11711231</xsl:attribute>
+            <xsl:attribute name="to">11891231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[226]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11950423</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[227]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11951122</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[232]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11961031</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[246]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11981231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[257]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12040131</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[265]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12080312</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[266]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12080312</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[267]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12080314</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[272]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12090229</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[273]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12090630</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[274]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12090630</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[275]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12090630</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[276]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12090922</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[278]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12091231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[281]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12101210</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[286]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12110831</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[295]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12130229</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[296]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12131031</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[297]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12131231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[301]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">12081231</xsl:attribute>
+            <xsl:attribute name="to">12131231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[302]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11651231</xsl:attribute>
+            <xsl:attribute name="to">11951231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[312]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">11821004</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[313]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:dateRange>
+            <xsl:attribute name="from">11711231</xsl:attribute>
+            <xsl:attribute name="to">11861231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:dateRange>
+    </xsl:template>
+    <xsl:template match="/teiCorpus/TEI[317]/teiHeader[1]/profileDesc[1]/creation[1]/date[1]">
+        <cei:date>
+            <xsl:attribute name="value">12031231</xsl:attribute>
+            <xsl:apply-templates/>
+        </cei:date>
+    </xsl:template>
 </xsl:stylesheet>

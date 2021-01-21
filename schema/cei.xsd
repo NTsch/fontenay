@@ -2286,7 +2286,7 @@
                 <xs:element ref="figure"/>
                 <xs:element ref="surplus"/>
                 <xs:element name="metamark"/>
-                <xs:element name="graphic"/>
+                <xs:element name="graphic"/> <!--löschbar?-->
             </xs:choice>
             <xs:attributeGroup ref="lang"/>
             <xs:attributeGroup ref="standard"/>
@@ -3182,6 +3182,7 @@
                             <xs:element ref="witEnd"/>
                             <xs:element ref="witDetail"/>
                             <xs:element ref="surplus"/>
+                            <xs:element ref="damage"/>
                             <xs:group ref="biblArch"/>
                             <xs:group ref="layout"/>
                             <xs:group ref="reference"/>
@@ -4469,6 +4470,7 @@
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="foreign"/>
                 <xs:element ref="num"/>
+                <xs:element ref="note"/>
                 <xs:group ref="Originalbefund"/>
             </xs:choice>
             <xs:attribute name="from" type="normalizedDateValue" use="required">
