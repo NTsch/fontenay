@@ -66,8 +66,19 @@
                     <xsl:apply-templates select="ancestor::TEI/facsimile/graphic[position() >= 3]"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:apply-templates select="ancestor::TEI/facsimile/graphic[position() &lt; 3]"
-                    />
+                    <xsl:choose>
+                        <xsl:when test="ancestor::TEI/text/body/p/pb/@facs">
+                            <cei:figure>
+                                <cei:graphic
+                                    url="{concat('https://iiif.irht.cnrs.fr/iiif/France/Dijon/AD212315101/DEPOT/', substring-before(ancestor::TEI/text/body/p/pb/@facs, '.png'), '/full/full/0/default.jpg')}"
+                                />
+                            </cei:figure>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:apply-templates
+                                select="ancestor::TEI/facsimile/graphic[position() &lt; 3]"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:otherwise>
             </xsl:choose>
         </cei:witnessOrig>
@@ -84,7 +95,7 @@
             </xsl:if>
         </cei:witness>
     </xsl:template>
-    
+
     <xsl:template match="witness[not(text())]"/>
 
     <xsl:template match="abstract">
@@ -624,7 +635,7 @@
     <xsl:template match="hi">
         <cei:hi>
             <xsl:copy-of
-                select="@*[not(name() = 'xml:space') and not((name() = 'rend' and contains(., 'background')))]"/>
+                select="@*[not(name() = 'xml:space')]"/>
             <xsl:apply-templates/>
         </cei:hi>
     </xsl:template>
